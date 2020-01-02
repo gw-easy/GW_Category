@@ -8,6 +8,8 @@
 
 #import "PopTestVC.h"
 #import "Pop2ViewController.h"
+
+static UIView *aaa = nil;
 @interface PopTestVC ()
 
 @end
@@ -18,6 +20,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor redColor];
+    aaa = [UIView new];
+    [self.view addSubview:aaa];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         
         Pop2ViewController *pop2 = [Pop2ViewController new];
@@ -27,10 +31,10 @@
         [self.navigationController pushViewController:pop2 animated:YES];
     });
     
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(8 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//        [self dismissViewControllerAnimated:YES completion:nil];
-        [self.navigationController popViewControllerAnimated:YES];
-    });
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(8 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+////        [self dismissViewControllerAnimated:YES completion:nil];
+//        [self.navigationController popViewControllerAnimated:YES];
+//    });
 }
 
 
@@ -43,6 +47,8 @@
     }
 }
 
-
+- (void)dealloc{
+    NSLog(@"dealloc");
+}
 
 @end

@@ -9,8 +9,8 @@
 
 
 #import "UIView+GW_AutoLayout.h"
+#import "NSObject+GWObject.h"
 #import <objc/runtime.h>
-
 #if TARGET_OS_IPHONE || TARGET_OS_TV
 
 #define kDeprecatedVerticalAdapter (0)
@@ -3255,7 +3255,16 @@ static const int kBottom_Line_Tag = kTop_Line_Tag + 1;
 
 @implementation UIView(GWView)
 + (void)load{
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(gw_applicationDidFinishLaunching) name:UIApplicationDidFinishLaunchingNotification object:nil];
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(gw_applicationDidFinishLaunching) name:UIApplicationDidFinishLaunchingNotification object:nil];
+        
+#ifdef DEBUG
+        
+#endif
+    });
+    
+    
 }
 
 + (void)gw_applicationDidFinishLaunching{
@@ -3444,3 +3453,16 @@ static char *HideViewsAddress = "hideViewsAddress";
 }
 
 @end
+
+#if GW_MemoryLeakDebug
+@implementation UIView (GWView_MemoryLeak)
+
+- (BOOL)GW_Dealloc {
+    if (![super GW_Dealloc]) {
+        return NO;
+    }
+    [self GW_ReleaseChildren:self.subviews];
+    return YES;
+}
+@end
+#endif

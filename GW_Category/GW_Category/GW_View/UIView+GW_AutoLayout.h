@@ -1173,3 +1173,8 @@ static NSString *const GW_TAB_BAR_HEIGHT = @"GW_TAB_BAR_HEIGHT";
 - (void)hideSelf:(BOOL)animated complete:(void(^)(void)) complete;
 
 @end
+#if GW_MemoryLeakDebug
+@interface UIView (GWView_MemoryLeak)
+
+@end
+#endif

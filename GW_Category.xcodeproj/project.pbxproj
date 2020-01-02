@@ -14,7 +14,6 @@
 		28466D5623B9ECA600407C3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28466D5423B9ECA600407C3F /* LaunchScreen.storyboard */; };
 		28466D5923B9ECA600407C3F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 28466D5823B9ECA600407C3F /* main.m */; };
 		28466D8D23B9ED7C00407C3F /* NSObject+GW_Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 28466D6123B9ED7C00407C3F /* NSObject+GW_Model.m */; };
-		28466D8E23B9ED7C00407C3F /* UIView+GW.m in Sources */ = {isa = PBXBuildFile; fileRef = 28466D6423B9ED7C00407C3F /* UIView+GW.m */; };
 		28466D8F23B9ED7C00407C3F /* UIView+GW_AutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 28466D6523B9ED7C00407C3F /* UIView+GW_AutoLayout.m */; };
 		28466D9023B9ED7C00407C3F /* UIControl+GWControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 28466D6A23B9ED7C00407C3F /* UIControl+GWControl.m */; };
 		28466D9123B9ED7C00407C3F /* UIImageView+GWImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 28466D6E23B9ED7C00407C3F /* UIImageView+GWImageView.m */; };
@@ -32,6 +31,12 @@
 		28466D9F23B9F25F00407C3F /* PopTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 28466D9E23B9F25F00407C3F /* PopTestVC.m */; };
 		28466DA223B9FF7700407C3F /* Pop2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28466DA123B9FF7700407C3F /* Pop2ViewController.m */; };
 		28466DA523BA006500407C3F /* UIViewController+GWViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28466DA423BA006500407C3F /* UIViewController+GWViewController.m */; };
+		28D336C923BDC1BB00B17546 /* UIApplication+GWApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D336C823BDC1BB00B17546 /* UIApplication+GWApplication.m */; };
+		28D336D623BDD01B00B17546 /* UITouch+GWTouch.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D336D523BDD01B00B17546 /* UITouch+GWTouch.m */; };
+		28D336DA23BDDA6900B17546 /* UINavigationController+GWNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D336D923BDDA6900B17546 /* UINavigationController+GWNavigationController.m */; };
+		28D3370023BDF91F00B17546 /* UITabBarController+GWTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D336FF23BDF91F00B17546 /* UITabBarController+GWTabBarController.m */; };
+		28D3370323BDF9B800B17546 /* UIPageViewController+GWPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D3370223BDF9B800B17546 /* UIPageViewController+GWPageViewController.m */; };
+		28D3370923BDFFCA00B17546 /* TestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D3370823BDFFCA00B17546 /* TestView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,9 +52,7 @@
 		28466D5823B9ECA600407C3F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		28466D6123B9ED7C00407C3F /* NSObject+GW_Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+GW_Model.m"; sourceTree = "<group>"; };
 		28466D6223B9ED7C00407C3F /* NSObject+GW_Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+GW_Model.h"; sourceTree = "<group>"; };
-		28466D6423B9ED7C00407C3F /* UIView+GW.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+GW.m"; sourceTree = "<group>"; };
 		28466D6523B9ED7C00407C3F /* UIView+GW_AutoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+GW_AutoLayout.m"; sourceTree = "<group>"; };
-		28466D6623B9ED7C00407C3F /* UIView+GW.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+GW.h"; sourceTree = "<group>"; };
 		28466D6723B9ED7C00407C3F /* GW_AutoLayoutUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW_AutoLayoutUtilities.h; sourceTree = "<group>"; };
 		28466D6823B9ED7C00407C3F /* UIView+GW_AutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+GW_AutoLayout.h"; sourceTree = "<group>"; };
 		28466D6A23B9ED7C00407C3F /* UIControl+GWControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+GWControl.m"; sourceTree = "<group>"; };
@@ -84,6 +87,18 @@
 		28466DA123B9FF7700407C3F /* Pop2ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Pop2ViewController.m; sourceTree = "<group>"; };
 		28466DA323BA006500407C3F /* UIViewController+GWViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+GWViewController.h"; sourceTree = "<group>"; };
 		28466DA423BA006500407C3F /* UIViewController+GWViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+GWViewController.m"; sourceTree = "<group>"; };
+		28D336C723BDC1BB00B17546 /* UIApplication+GWApplication.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIApplication+GWApplication.h"; sourceTree = "<group>"; };
+		28D336C823BDC1BB00B17546 /* UIApplication+GWApplication.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+GWApplication.m"; sourceTree = "<group>"; };
+		28D336D423BDD01B00B17546 /* UITouch+GWTouch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITouch+GWTouch.h"; sourceTree = "<group>"; };
+		28D336D523BDD01B00B17546 /* UITouch+GWTouch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITouch+GWTouch.m"; sourceTree = "<group>"; };
+		28D336D823BDDA6900B17546 /* UINavigationController+GWNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+GWNavigationController.h"; sourceTree = "<group>"; };
+		28D336D923BDDA6900B17546 /* UINavigationController+GWNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+GWNavigationController.m"; sourceTree = "<group>"; };
+		28D336FE23BDF91F00B17546 /* UITabBarController+GWTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITabBarController+GWTabBarController.h"; sourceTree = "<group>"; };
+		28D336FF23BDF91F00B17546 /* UITabBarController+GWTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITabBarController+GWTabBarController.m"; sourceTree = "<group>"; };
+		28D3370123BDF9B800B17546 /* UIPageViewController+GWPageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIPageViewController+GWPageViewController.h"; sourceTree = "<group>"; };
+		28D3370223BDF9B800B17546 /* UIPageViewController+GWPageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIPageViewController+GWPageViewController.m"; sourceTree = "<group>"; };
+		28D3370723BDFFCA00B17546 /* TestView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestView.h; sourceTree = "<group>"; };
+		28D3370823BDFFCA00B17546 /* TestView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +140,8 @@
 				28466D9E23B9F25F00407C3F /* PopTestVC.m */,
 				28466DA023B9FF7700407C3F /* Pop2ViewController.h */,
 				28466DA123B9FF7700407C3F /* Pop2ViewController.m */,
+				28D3370723BDFFCA00B17546 /* TestView.h */,
+				28D3370823BDFFCA00B17546 /* TestView.m */,
 				28466D4F23B9ECA500407C3F /* Main.storyboard */,
 				28466D5223B9ECA600407C3F /* Assets.xcassets */,
 				28466D5423B9ECA600407C3F /* LaunchScreen.storyboard */,
@@ -150,6 +167,8 @@
 				28466D8523B9ED7C00407C3F /* GW_Button */,
 				28466D8823B9ED7C00407C3F /* GW_Dictionary */,
 				28466DA623BA007200407C3F /* GW_ViewController */,
+				28D336CA23BDC1C500B17546 /* GW_Application */,
+				28D336D723BDD02200B17546 /* GW_Touch */,
 			);
 			path = GW_Category;
 			sourceTree = "<group>";
@@ -169,8 +188,6 @@
 				28466D6723B9ED7C00407C3F /* GW_AutoLayoutUtilities.h */,
 				28466D6823B9ED7C00407C3F /* UIView+GW_AutoLayout.h */,
 				28466D6523B9ED7C00407C3F /* UIView+GW_AutoLayout.m */,
-				28466D6623B9ED7C00407C3F /* UIView+GW.h */,
-				28466D6423B9ED7C00407C3F /* UIView+GW.m */,
 			);
 			path = GW_View;
 			sourceTree = "<group>";
@@ -276,8 +293,32 @@
 			children = (
 				28466DA323BA006500407C3F /* UIViewController+GWViewController.h */,
 				28466DA423BA006500407C3F /* UIViewController+GWViewController.m */,
+				28D336D823BDDA6900B17546 /* UINavigationController+GWNavigationController.h */,
+				28D336D923BDDA6900B17546 /* UINavigationController+GWNavigationController.m */,
+				28D336FE23BDF91F00B17546 /* UITabBarController+GWTabBarController.h */,
+				28D336FF23BDF91F00B17546 /* UITabBarController+GWTabBarController.m */,
+				28D3370123BDF9B800B17546 /* UIPageViewController+GWPageViewController.h */,
+				28D3370223BDF9B800B17546 /* UIPageViewController+GWPageViewController.m */,
 			);
 			path = GW_ViewController;
+			sourceTree = "<group>";
+		};
+		28D336CA23BDC1C500B17546 /* GW_Application */ = {
+			isa = PBXGroup;
+			children = (
+				28D336C723BDC1BB00B17546 /* UIApplication+GWApplication.h */,
+				28D336C823BDC1BB00B17546 /* UIApplication+GWApplication.m */,
+			);
+			path = GW_Application;
+			sourceTree = "<group>";
+		};
+		28D336D723BDD02200B17546 /* GW_Touch */ = {
+			isa = PBXGroup;
+			children = (
+				28D336D423BDD01B00B17546 /* UITouch+GWTouch.h */,
+				28D336D523BDD01B00B17546 /* UITouch+GWTouch.m */,
+			);
+			path = GW_Touch;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -351,21 +392,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				28466D9823B9ED7C00407C3F /* NSDate+GWDate.m in Sources */,
+				28D336DA23BDDA6900B17546 /* UINavigationController+GWNavigationController.m in Sources */,
 				28466D9923B9ED7C00407C3F /* NSObject+GWObject.m in Sources */,
 				28466D9F23B9F25F00407C3F /* PopTestVC.m in Sources */,
 				28466D9623B9ED7C00407C3F /* NSArray+GWArray.m in Sources */,
 				28466D9123B9ED7C00407C3F /* UIImageView+GWImageView.m in Sources */,
+				28D3370023BDF91F00B17546 /* UITabBarController+GWTabBarController.m in Sources */,
+				28D3370323BDF9B800B17546 /* UIPageViewController+GWPageViewController.m in Sources */,
 				28466D9C23B9ED7C00407C3F /* NSDictionary+GWDictionary.m in Sources */,
+				28D336C923BDC1BB00B17546 /* UIApplication+GWApplication.m in Sources */,
 				28466D4E23B9ECA500407C3F /* ViewController.m in Sources */,
 				28466DA223B9FF7700407C3F /* Pop2ViewController.m in Sources */,
 				28466D9B23B9ED7C00407C3F /* NSMutableDictionary+GWMutableDictionary.m in Sources */,
 				28466D9A23B9ED7C00407C3F /* UIButton+GWButton.m in Sources */,
 				28466D9023B9ED7C00407C3F /* UIControl+GWControl.m in Sources */,
 				28466D8D23B9ED7C00407C3F /* NSObject+GW_Model.m in Sources */,
+				28D3370923BDFFCA00B17546 /* TestView.m in Sources */,
+				28D336D623BDD01B00B17546 /* UITouch+GWTouch.m in Sources */,
 				28466D4823B9ECA500407C3F /* AppDelegate.m in Sources */,
 				28466D9723B9ED7C00407C3F /* NSMutableArray+GWMutableArray.m in Sources */,
 				28466D5923B9ECA600407C3F /* main.m in Sources */,
-				28466D8E23B9ED7C00407C3F /* UIView+GW.m in Sources */,
 				28466D9223B9ED7C00407C3F /* UIImage+GWImage.m in Sources */,
 				28466DA523BA006500407C3F /* UIViewController+GWViewController.m in Sources */,
 				28466D8F23B9ED7C00407C3F /* UIView+GW_AutoLayout.m in Sources */,
@@ -513,6 +559,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = GW_Category/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -520,6 +567,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "cn.wangxiao.GW-Category";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TVOS_DEPLOYMENT_TARGET = 13.0;
 			};
 			name = Debug;
 		};
@@ -529,6 +577,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = GW_Category/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -536,6 +585,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "cn.wangxiao.GW-Category";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TVOS_DEPLOYMENT_TARGET = 13.0;
 			};
 			name = Release;
 		};

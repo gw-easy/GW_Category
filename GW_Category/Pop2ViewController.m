@@ -7,7 +7,7 @@
 //
 
 #import "Pop2ViewController.h"
-
+#import "TestView.h"
 @interface Pop2ViewController ()
 
 @end
@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor greenColor];
-    
+    [self.view addSubview: [TestView alertV]];
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -35,5 +35,8 @@
     }
 }
 
+- (void)dealloc{
+    NSLog(@"Pop2ViewController - dealloc");
+}
 
 @end
