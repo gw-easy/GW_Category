@@ -14,8 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface UIViewController (GWViewController)
 
 
-/// 在viewWillDisappear实现 返回ture 则表示控制器应该销毁了，可在此将定时器或者其他引用进行销毁操作
-- (BOOL)isWillDisappearAndDeallocVC;
+/// 在viewDidDisappear实现 返回ture 则表示控制器应该销毁了，可在此将定时器或者其他引用进行销毁操作
+- (BOOL)isDidDisappearAndDeallocVC;
 
 @end
 

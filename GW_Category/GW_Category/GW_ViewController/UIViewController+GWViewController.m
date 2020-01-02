@@ -30,25 +30,30 @@
 
 - (void)gw_viewDidDisappear:(BOOL)animated{
     [self gw_viewDidDisappear:animated];
-    
-    if ([objc_getAssociatedObject(self, gw_VC_HasPop_key) boolValue]) {
 #if GW_MemoryLeakDebug
+    if ([objc_getAssociatedObject(self, gw_VC_HasPop_key) boolValue]) {
         [self GW_Dealloc];
-#endif
     }
+#endif
 }
 
 - (void)gw_dismissViewControllerAnimated:(BOOL)flag completion:(void (^)(void))completion{
-    [self gw_dismissViewControllerAnimated:flag completion:completion];
-    UIViewController *dismissedViewController = self.presentedViewController;
-    if (!dismissedViewController && self.presentingViewController) {
+    UIViewController *dismissedViewController = nil;
+    if (self.navigationController && self.navigationController.childViewControllers.count > 1) {
+        dismissedViewController = self.navigationController.childViewControllers.firstObject;
+        [self.navigationController popToRootViewControllerAnimated:NO];
+    }
+    if (!dismissedViewController) {
+        dismissedViewController = self.presentedViewController;
+    }
+    if (!dismissedViewController) {
         dismissedViewController = self;
     }
     if (!dismissedViewController) return;
+    [dismissedViewController gw_dismissViewControllerAnimated:flag completion:completion];
 #if GW_MemoryLeakDebug
     [dismissedViewController GW_Dealloc];
 #endif
-    
 }
 
 #if GW_MemoryLeakDebug
@@ -67,6 +72,10 @@
 }
 #endif
 
+- (BOOL)isDidDisappearAndDeallocVC{
+    return [objc_getAssociatedObject(self, gw_VC_HasPop_key) boolValue];
+}
+
 - (void)GW_presentViewController:(UIViewController *)viewControllerToPresent animated:(BOOL)flag completion:(void (^)(void))completion{
 //    兼容ios 13
     if (![viewControllerToPresent isKindOfClass:[UIImagePickerController class]]) {
@@ -79,44 +88,8 @@
     [self GW_presentViewController:viewControllerToPresent animated:flag completion:completion];
 }
 
-- (BOOL)canDismiss_GW{
-    return self.presentingViewController?YES:NO;
-}
 
-- (BOOL)canPop_GW{
-    if (self.navigationController && self.navigationController.childViewControllers.count > 1) {
-        return YES;
-    }
-    return NO;
-}
 
-- (BOOL)isLastVC{
-    return self.navigationController.childViewControllers.lastObject == self;
-}
-
-- (BOOL)isWillDisappearAndDeallocVC{
-    if (self.presentingViewController && !self.presentedViewController) {
-        if ([self canPop_GW] && [self isLastVC]) {
-            return YES;
-        }
-        if (![self canPop_GW]) {
-            return YES;
-        }
-//        return NO;
-    }
-    
-    if ([self canPop_GW] && ![self isLastVC]) {
-        
-        return YES;
-    }
-//    if (self.presentingViewController && !self.presentedViewController && !self.navigationController) {
-//        return YES;
-//    }
-//    if (self.navigationController && self.navigationController.childViewControllers && !self.presentingViewController) {
-//        return ![self.navigationController.childViewControllers containsObject:self];
-//    }
-    return NO;
-}
 
 
 

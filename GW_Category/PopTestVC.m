@@ -8,7 +8,6 @@
 
 #import "PopTestVC.h"
 #import "Pop2ViewController.h"
-
 static UIView *aaa = nil;
 @interface PopTestVC ()
 
@@ -32,16 +31,14 @@ static UIView *aaa = nil;
     });
     
 //    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(8 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-////        [self dismissViewControllerAnimated:YES completion:nil];
-//        [self.navigationController popViewControllerAnimated:YES];
+//        [self dismissViewControllerAnimated:YES completion:nil];
+////        [self.navigationController popViewControllerAnimated:YES];
 //    });
 }
 
-
-
-- (void)viewWillDisappear:(BOOL)animated{
-    [super viewWillDisappear:animated];
-    if ([self isWillDisappearAndDeallocVC]) {
+- (void)viewDidDisappear:(BOOL)animated{
+    [super viewDidDisappear:animated];
+    if ([self isDidDisappearAndDeallocVC]) {
         
         NSLog(@"PopTestVC - disappear");
     }

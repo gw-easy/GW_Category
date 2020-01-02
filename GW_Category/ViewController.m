@@ -18,9 +18,9 @@
     [super viewDidLoad];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         PopTestVC *popVC = [PopTestVC new];
-//        UINavigationController *popNav = [[UINavigationController alloc] initWithRootViewController:popVC];
-//        [self presentViewController:popVC animated:YES completion:nil];
-        [self.navigationController pushViewController:popVC animated:YES];
+        UINavigationController *popNav = [[UINavigationController alloc] initWithRootViewController:popVC];
+        [self presentViewController:popNav animated:YES completion:nil];
+//        [self.navigationController pushViewController:popVC animated:YES];
     });
 }
 
