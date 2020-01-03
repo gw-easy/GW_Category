@@ -9,6 +9,7 @@
 #import "UINavigationController+GWNavigationController.h"
 #import "NSObject+GWObject.h"
 #import <objc/runtime.h>
+#import "UIViewController+GWViewController.h"
 @implementation UINavigationController (GWNavigationController)
 
 + (void)load {
@@ -48,29 +49,34 @@
         objc_setAssociatedObject(self, gw_splitVC_HasPop_key, poppedViewController, OBJC_ASSOCIATION_RETAIN);
         return poppedViewController;
     }
-    [poppedViewController GW_Dealloc];
 #endif
-    objc_setAssociatedObject(poppedViewController, gw_VC_HasPop_key, @(YES), OBJC_ASSOCIATION_RETAIN);
+    [poppedViewController setGw_isDidDisappearAndDeallocVC:YES];
     return poppedViewController;
 }
 
 - (NSArray<UIViewController *> *)gw_popToViewController:(UIViewController *)viewController animated:(BOOL)animated{
+    UIViewController *popVC = self.topViewController;
     NSArray<UIViewController *> *poppedViewControllers = [self gw_popToViewController:viewController animated:animated];
-#if GW_MemoryLeakDebug
     for (UIViewController *viewController in poppedViewControllers) {
-        [viewController GW_Dealloc];
+        [viewController setGw_isDidDisappearAndDeallocVC:YES];
+        if (popVC == viewController) {
+            continue;
+        }
+        [viewController viewDidDisappear:NO];
     }
-#endif
     return poppedViewControllers;
 }
 
 - (NSArray<UIViewController *> *)gw_popToRootViewControllerAnimated:(BOOL)animated{
+    UIViewController *popVC = self.topViewController;
     NSArray<UIViewController *> *poppedViewControllers = [self gw_popToRootViewControllerAnimated:animated];
-#if GW_MemoryLeakDebug
     for (UIViewController *viewController in poppedViewControllers) {
-        [viewController GW_Dealloc];
+        [viewController setGw_isDidDisappearAndDeallocVC:YES];
+        if (popVC == viewController) {
+            continue;
+        }
+        [viewController viewDidDisappear:NO];
     }
-#endif
     return poppedViewControllers;
 }
 

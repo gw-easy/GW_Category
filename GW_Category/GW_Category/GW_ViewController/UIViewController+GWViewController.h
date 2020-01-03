@@ -12,10 +12,18 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface UIViewController (GWViewController)
-
-
 /// 在viewDidDisappear实现 返回ture 则表示控制器应该销毁了，可在此将定时器或者其他引用进行销毁操作
-- (BOOL)isDidDisappearAndDeallocVC;
+@property (assign ,nonatomic) BOOL gw_isDidDisappearAndDeallocVC;
+
+
+/// dismiss到指定控制器
+/// @param className 控制器名称
+/// @param animated 动画
+- (void)gw_dismissToViewController:(NSString *)className animated:(BOOL)animated;
+ 
+/// dismiss到root控制器
+/// @param animated 动画
+- (void)gw_dismissToRootViewControllerAnimated:(BOOL)animated;
 
 @end
 

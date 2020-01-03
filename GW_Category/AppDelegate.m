@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "ViewController.h"
+#import "TestMemoryLeakViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -17,13 +17,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    UIWindow *newW = [UIWindow new];
-    self.window = newW;
-    ViewController *vc = [ViewController new];
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
-    
-    self.window.rootViewController = nav;
-    [self.window makeKeyAndVisible];
+//    UIWindow *newW = [UIWindow new];
+//    self.window = newW;
+//    ViewController *vc = [ViewController new];
+//    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+//    
+//    self.window.rootViewController = nav;
+//    [self.window makeKeyAndVisible];
     return YES;
 }
 

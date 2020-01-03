@@ -13,7 +13,6 @@
 #endif
 
 static const void * _Nonnull gw_sendAction_sender_LastKey = &gw_sendAction_sender_LastKey;
-static const void * _Nonnull gw_VC_HasPop_key = &gw_VC_HasPop_key;
 static const void * _Nonnull gw_splitVC_HasPop_key = &gw_splitVC_HasPop_key;
 static const void * _Nonnull gw_Objc_Ptrs_key = &gw_Objc_Ptrs_key;
 static const void * _Nonnull gw_viewStack_key = &gw_viewStack_key;
