@@ -33,7 +33,8 @@
 - (void)btn2Action{
 //    [self dismissViewControllerAnimated:YES completion:nil];
 //    [self gw_dismissToRootViewControllerAnimated:YES];
-    [self.navigationController popViewControllerAnimated:YES];
+    [self.navigationController popToRootViewControllerAnimated:YES];
+//    [self.navigationController popViewControllerAnimated:YES];
 }
 
 #pragma mark - UI
@@ -57,8 +58,8 @@
     NSLog(@"TestTimeDeallocViewController - go - %ld",(long)self.index);
 }
 
-- (void)viewWillDisappear:(BOOL)animated{
-    [super viewWillDisappear:animated];
+- (void)viewDidDisappear:(BOOL)animated{
+    [super viewDidDisappear:animated];
     if (self.gw_isDidDisappearAndDeallocVC) {
         if (_oneTime) {
             [_oneTime invalidate];

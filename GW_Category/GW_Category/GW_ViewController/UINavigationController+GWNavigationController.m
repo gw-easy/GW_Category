@@ -55,26 +55,22 @@
 }
 
 - (NSArray<UIViewController *> *)gw_popToViewController:(UIViewController *)viewController animated:(BOOL)animated{
-    UIViewController *popVC = self.topViewController;
     NSArray<UIViewController *> *poppedViewControllers = [self gw_popToViewController:viewController animated:animated];
     for (UIViewController *viewController in poppedViewControllers) {
         [viewController setGw_isDidDisappearAndDeallocVC:YES];
-        if (popVC == viewController) {
-            continue;
-        }
         [viewController viewDidDisappear:NO];
     }
     return poppedViewControllers;
 }
 
 - (NSArray<UIViewController *> *)gw_popToRootViewControllerAnimated:(BOOL)animated{
-    UIViewController *popVC = self.topViewController;
+    NSArray<UIViewController *> *childArray = self.childViewControllers;
     NSArray<UIViewController *> *poppedViewControllers = [self gw_popToRootViewControllerAnimated:animated];
+    if (childArray && (childArray.count - poppedViewControllers.count != 1)) {
+        poppedViewControllers = [childArray subarrayWithRange:NSMakeRange(1, childArray.count-1)];
+    }
     for (UIViewController *viewController in poppedViewControllers) {
         [viewController setGw_isDidDisappearAndDeallocVC:YES];
-        if (popVC == viewController) {
-            continue;
-        }
         [viewController viewDidDisappear:NO];
     }
     return poppedViewControllers;

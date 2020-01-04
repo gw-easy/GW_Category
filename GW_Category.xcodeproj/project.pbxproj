@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2824FB3923C027DD0052D662 /* ThreeTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2824FB3823C027DD0052D662 /* ThreeTimeViewController.m */; };
 		28466D4823B9ECA500407C3F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 28466D4723B9ECA500407C3F /* AppDelegate.m */; };
 		28466D4E23B9ECA500407C3F /* TestMemoryLeakViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28466D4D23B9ECA500407C3F /* TestMemoryLeakViewController.m */; };
 		28466D5123B9ECA500407C3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28466D4F23B9ECA500407C3F /* Main.storyboard */; };
@@ -44,6 +45,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2824FB3723C027DD0052D662 /* ThreeTimeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThreeTimeViewController.h; sourceTree = "<group>"; };
+		2824FB3823C027DD0052D662 /* ThreeTimeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThreeTimeViewController.m; sourceTree = "<group>"; };
 		28466D4323B9ECA500407C3F /* GW_Category.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GW_Category.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28466D4623B9ECA500407C3F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		28466D4723B9ECA500407C3F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -335,6 +338,8 @@
 				28594B3223BF3CFB0046C955 /* TestTimeDeallocViewController.m */,
 				28594B3823BF44670046C955 /* TwoTImeViewController.h */,
 				28594B3923BF44670046C955 /* TwoTImeViewController.m */,
+				2824FB3723C027DD0052D662 /* ThreeTimeViewController.h */,
+				2824FB3823C027DD0052D662 /* ThreeTimeViewController.m */,
 			);
 			path = "测试定时器释放";
 			sourceTree = "<group>";
@@ -453,6 +458,7 @@
 				28466D9223B9ED7C00407C3F /* UIImage+GWImage.m in Sources */,
 				28466DA523BA006500407C3F /* UIViewController+GWViewController.m in Sources */,
 				28594B2C23BF0AC90046C955 /* Pop3VCViewController.m in Sources */,
+				2824FB3923C027DD0052D662 /* ThreeTimeViewController.m in Sources */,
 				28466D8F23B9ED7C00407C3F /* UIView+GW_AutoLayout.m in Sources */,
 				28466D9523B9ED7C00407C3F /* UITableViewCell+GW_AutoHeightForCell.m in Sources */,
 				28466D9423B9ED7C00407C3F /* NSString+GWString.m in Sources */,

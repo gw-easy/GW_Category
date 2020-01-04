@@ -1,30 +1,32 @@
 //
-//  TwoTImeViewController.m
+//  ThreeTimeViewController.m
 //  GW_Category
 //
-//  Created by zdwx on 2020/1/3.
+//  Created by zdwx on 2020/1/4.
 //  Copyright © 2020 gw. All rights reserved.
 //
 
-#import "TwoTImeViewController.h"
 #import "ThreeTimeViewController.h"
 #import "UIViewController+GWViewController.h"
-
-@interface TwoTImeViewController ()
+#import "TestTimeDeallocViewController.h"
+#import "TwoTImeViewController.h"
+@interface ThreeTimeViewController ()
 @property (strong ,nonatomic) NSTimer *oneTime;
+
 @end
 
-@implementation TwoTImeViewController
+@implementation ThreeTimeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = [UIColor purpleColor];
     [self setUI];
 }
 
 - (void)btnAction{
-    ThreeTimeViewController *popVC = [ThreeTimeViewController new];
+    TwoTImeViewController *popVC = [TwoTImeViewController new];
+//    TestTimeDeallocViewController *popVC = [TestTimeDeallocViewController new];
     popVC.index = self.index+1;
     UINavigationController *popNav = [[UINavigationController alloc] initWithRootViewController:popVC];
     [self presentViewController:popNav animated:YES completion:nil];
@@ -32,10 +34,17 @@
 }
 
 - (void)btn2Action{
-//    [self dismissViewControllerAnimated:YES completion:nil];
+//    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
 //    [self gw_dismissToRootViewControllerAnimated:YES];
 //    [self.navigationController popViewControllerAnimated:YES];
-    [self.navigationController popToRootViewControllerAnimated:YES];
+//    [self.navigationController popToRootViewControllerAnimated:YES];
+//    for (UIViewController *subVC in self.navigationController.childViewControllers) {
+//        if ([subVC isKindOfClass:[TestTimeDeallocViewController class]]) {
+//            [self.navigationController popToViewController:subVC animated:YES];
+//            break;
+//        }
+//    }
+    [self gw_dismissToViewController:@"TestTimeDeallocViewController" animated:YES];
 }
 
 #pragma mark - UI

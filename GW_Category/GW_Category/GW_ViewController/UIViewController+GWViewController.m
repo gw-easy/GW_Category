@@ -39,11 +39,12 @@
 
 - (void)gw_dismissViewControllerAnimated:(BOOL)flag completion:(void (^)(void))completion{
     UIViewController *dismissedViewController = self;
-    if ([dismissedViewController isKindOfClass:[UINavigationController class]] && !dismissedViewController.presentedViewController) {
-        dismissedViewController = self.childViewControllers.lastObject;
-    }
     if (!dismissedViewController.presentedViewController) {
-        [dismissedViewController setGw_isDidDisappearAndDeallocVC:YES];
+//        self.navigationController
+        dismissedViewController = [self dismissNavVC:self needDealloc:NO];
+        if (dismissedViewController.presentingViewController) {
+            [dismissedViewController setGw_isDidDisappearAndDeallocVC:YES];
+        }
     }
     [dismissedViewController gw_dismissViewControllerAnimated:flag completion:completion];
 }
@@ -77,36 +78,42 @@
 - (UIViewController*)getRootController:(NSString*)className{
     if (!className) {
         //直接跳转到根视图控制器
-        UIViewController *presentingVc = [self dismissNavVC:self];
+        UIViewController *presentingVc = self;
         while (presentingVc.presentingViewController) {
+            presentingVc = [presentingVc dismissNavVC:presentingVc needDealloc:YES];
             presentingVc = presentingVc.presentingViewController;
-            if (!presentingVc.presentingViewController) {
-                break;
-            }
-            [self dismissNavVC:presentingVc];
         }
         return presentingVc;
     }
+    
     Class cName = NSClassFromString(className);
-    if (!cName || ![NSClassFromString(className) isKindOfClass:[UIViewController class]]){
+    if (!cName){
         return nil;
     }
     
-    UIViewController *presentingVc = [self dismissNavVC:self];
+    UIViewController *presentingVc = self;
     while (presentingVc.presentingViewController) {
+        presentingVc = [self dismissNavVC:presentingVc needDealloc:YES];
         presentingVc = presentingVc.presentingViewController;
+        if ([presentingVc isKindOfClass:[UINavigationController class]]) {
+            for (UIViewController *subVC in presentingVc.childViewControllers) {
+                if ([subVC isMemberOfClass:cName]) {
+                    return presentingVc;
+                }
+            }
+        }
         if ([presentingVc isMemberOfClass:cName]) {
             break;
         }
-        presentingVc = [self dismissNavVC:presentingVc];
     }
     return presentingVc;
  
 }
 
-- (UIViewController *)dismissNavVC:(UIViewController *)vc{
+- (UIViewController *)dismissNavVC:(UIViewController *)vc needDealloc:(BOOL)needDealloc{
     UIViewController *dismissedViewController = nil;
     UINavigationController *dismissNavVC = vc.navigationController;
+    
     if (!dismissNavVC && [vc isKindOfClass:[UINavigationController class]]) {
         dismissNavVC = (UINavigationController *)vc;
     }
@@ -117,7 +124,9 @@
     if (!dismissedViewController) {
         dismissedViewController = vc;
     }
-    [dismissedViewController setGw_isDidDisappearAndDeallocVC:YES];
+    if (needDealloc) {
+        [dismissedViewController setGw_isDidDisappearAndDeallocVC:YES];
+    }
     return dismissedViewController;
 }
 
