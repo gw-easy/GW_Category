@@ -58,15 +58,14 @@
         return NO;
     
     __weak id weakSelf = self;
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [weakSelf assertNotDealloc];
     });
-    
     return YES;
 }
 
 - (void)assertNotDealloc {
-    NSLog(@"warning - 发生了内存泄漏 - dealloc wrong -  \n %@ ",[self gw_viewStack_array]);
+    NSLog(@"warning - 发生了内存泄漏 - dealloc wrong\n %@ ",[self gw_viewStack_array]);
 }
 
 - (void)GW_ReleaseObject{
@@ -80,7 +79,6 @@
     if (!child) {
         return;
     }
-    
     [self GW_ReleaseChildren:@[ child ]];
 }
 

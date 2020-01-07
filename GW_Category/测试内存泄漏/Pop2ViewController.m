@@ -9,6 +9,7 @@
 #import "Pop2ViewController.h"
 #import "TestView.h"
 #import "Pop3VCViewController.h"
+#import "UIViewController+GWViewController.h"
 @interface Pop2ViewController ()
 
 @end
@@ -43,9 +44,9 @@
 - (void)btnAction{
     Pop3VCViewController *pop3 = [Pop3VCViewController new];
 
-//        UINavigationController *popNav2 = [[UINavigationController alloc] initWithRootViewController:pop2];
-//    [self presentViewController:pop3 animated:YES completion:nil];
-    [self.navigationController pushViewController:pop3 animated:YES];
+    UINavigationController *popNav2 = [[UINavigationController alloc] initWithRootViewController:pop3];
+    [self presentViewController:popNav2 animated:YES completion:nil];
+//    [self.navigationController pushViewController:pop3 animated:YES];
 }
 
 - (void)btn2Action{
@@ -61,8 +62,7 @@
 //- (void)viewWillDisappear:(BOOL)animated{
 //    [super viewWillDisappear:animated];
 //    
-//    NSLog(@"viewWillDisappear");
-//}
+//    NSLog(@"viewWillDisappear");//}
 
 - (void)viewDidDisappear:(BOOL)animated{
     [super viewDidDisappear:animated];

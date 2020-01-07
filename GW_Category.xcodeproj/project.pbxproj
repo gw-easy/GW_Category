@@ -7,46 +7,44 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2824FB3923C027DD0052D662 /* ThreeTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2824FB3823C027DD0052D662 /* ThreeTimeViewController.m */; };
 		28466D4823B9ECA500407C3F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 28466D4723B9ECA500407C3F /* AppDelegate.m */; };
 		28466D4E23B9ECA500407C3F /* TestMemoryLeakViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28466D4D23B9ECA500407C3F /* TestMemoryLeakViewController.m */; };
 		28466D5123B9ECA500407C3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28466D4F23B9ECA500407C3F /* Main.storyboard */; };
 		28466D5323B9ECA600407C3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28466D5223B9ECA600407C3F /* Assets.xcassets */; };
 		28466D5623B9ECA600407C3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28466D5423B9ECA600407C3F /* LaunchScreen.storyboard */; };
 		28466D5923B9ECA600407C3F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 28466D5823B9ECA600407C3F /* main.m */; };
-		28466D8D23B9ED7C00407C3F /* NSObject+GW_Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 28466D6123B9ED7C00407C3F /* NSObject+GW_Model.m */; };
-		28466D8F23B9ED7C00407C3F /* UIView+GW_AutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 28466D6523B9ED7C00407C3F /* UIView+GW_AutoLayout.m */; };
-		28466D9023B9ED7C00407C3F /* UIControl+GWControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 28466D6A23B9ED7C00407C3F /* UIControl+GWControl.m */; };
-		28466D9123B9ED7C00407C3F /* UIImageView+GWImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 28466D6E23B9ED7C00407C3F /* UIImageView+GWImageView.m */; };
-		28466D9223B9ED7C00407C3F /* UIImage+GWImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 28466D7123B9ED7C00407C3F /* UIImage+GWImage.m */; };
-		28466D9323B9ED7C00407C3F /* NSMutableAttributedString+GWMutableAttributedString.m in Sources */ = {isa = PBXBuildFile; fileRef = 28466D7523B9ED7C00407C3F /* NSMutableAttributedString+GWMutableAttributedString.m */; };
-		28466D9423B9ED7C00407C3F /* NSString+GWString.m in Sources */ = {isa = PBXBuildFile; fileRef = 28466D7623B9ED7C00407C3F /* NSString+GWString.m */; };
-		28466D9523B9ED7C00407C3F /* UITableViewCell+GW_AutoHeightForCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 28466D7923B9ED7C00407C3F /* UITableViewCell+GW_AutoHeightForCell.m */; };
-		28466D9623B9ED7C00407C3F /* NSArray+GWArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 28466D7D23B9ED7C00407C3F /* NSArray+GWArray.m */; };
-		28466D9723B9ED7C00407C3F /* NSMutableArray+GWMutableArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 28466D7E23B9ED7C00407C3F /* NSMutableArray+GWMutableArray.m */; };
-		28466D9823B9ED7C00407C3F /* NSDate+GWDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 28466D8123B9ED7C00407C3F /* NSDate+GWDate.m */; };
-		28466D9923B9ED7C00407C3F /* NSObject+GWObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 28466D8423B9ED7C00407C3F /* NSObject+GWObject.m */; };
-		28466D9A23B9ED7C00407C3F /* UIButton+GWButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 28466D8623B9ED7C00407C3F /* UIButton+GWButton.m */; };
-		28466D9B23B9ED7C00407C3F /* NSMutableDictionary+GWMutableDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 28466D8B23B9ED7C00407C3F /* NSMutableDictionary+GWMutableDictionary.m */; };
-		28466D9C23B9ED7C00407C3F /* NSDictionary+GWDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 28466D8C23B9ED7C00407C3F /* NSDictionary+GWDictionary.m */; };
 		28466D9F23B9F25F00407C3F /* PopTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 28466D9E23B9F25F00407C3F /* PopTestVC.m */; };
 		28466DA223B9FF7700407C3F /* Pop2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28466DA123B9FF7700407C3F /* Pop2ViewController.m */; };
-		28466DA523BA006500407C3F /* UIViewController+GWViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28466DA423BA006500407C3F /* UIViewController+GWViewController.m */; };
 		28594B2C23BF0AC90046C955 /* Pop3VCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28594B2B23BF0AC90046C955 /* Pop3VCViewController.m */; };
 		28594B2F23BF3A4D0046C955 /* MianTBController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28594B2E23BF3A4D0046C955 /* MianTBController.m */; };
-		28594B3323BF3CFB0046C955 /* TestTimeDeallocViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28594B3223BF3CFB0046C955 /* TestTimeDeallocViewController.m */; };
-		28594B3A23BF44670046C955 /* TwoTImeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28594B3923BF44670046C955 /* TwoTImeViewController.m */; };
-		28D336C923BDC1BB00B17546 /* UIApplication+GWApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D336C823BDC1BB00B17546 /* UIApplication+GWApplication.m */; };
-		28D336D623BDD01B00B17546 /* UITouch+GWTouch.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D336D523BDD01B00B17546 /* UITouch+GWTouch.m */; };
-		28D336DA23BDDA6900B17546 /* UINavigationController+GWNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D336D923BDDA6900B17546 /* UINavigationController+GWNavigationController.m */; };
-		28D3370023BDF91F00B17546 /* UITabBarController+GWTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D336FF23BDF91F00B17546 /* UITabBarController+GWTabBarController.m */; };
-		28D3370323BDF9B800B17546 /* UIPageViewController+GWPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D3370223BDF9B800B17546 /* UIPageViewController+GWPageViewController.m */; };
+		28BD826723C2DA5B0057EAED /* NSObject+GW_Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BD822E23C2DA5B0057EAED /* NSObject+GW_Model.m */; };
+		28BD826823C2DA5B0057EAED /* UIView+GW_AutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BD823123C2DA5B0057EAED /* UIView+GW_AutoLayout.m */; };
+		28BD826923C2DA5B0057EAED /* UIControl+GWControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BD823523C2DA5B0057EAED /* UIControl+GWControl.m */; };
+		28BD826A23C2DA5B0057EAED /* UIImageView+GWImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BD823923C2DA5B0057EAED /* UIImageView+GWImageView.m */; };
+		28BD826B23C2DA5B0057EAED /* UINavigationController+GWNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BD823D23C2DA5B0057EAED /* UINavigationController+GWNavigationController.m */; };
+		28BD826C23C2DA5B0057EAED /* UITabBarController+GWTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BD823F23C2DA5B0057EAED /* UITabBarController+GWTabBarController.m */; };
+		28BD826D23C2DA5B0057EAED /* UIPageViewController+GWPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BD824123C2DA5B0057EAED /* UIPageViewController+GWPageViewController.m */; };
+		28BD826E23C2DA5B0057EAED /* UIViewController+GWViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BD824223C2DA5B0057EAED /* UIViewController+GWViewController.m */; };
+		28BD826F23C2DA5B0057EAED /* UIApplication+GWApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BD824523C2DA5B0057EAED /* UIApplication+GWApplication.m */; };
+		28BD827023C2DA5B0057EAED /* UIImage+GWImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BD824823C2DA5B0057EAED /* UIImage+GWImage.m */; };
+		28BD827123C2DA5B0057EAED /* NSMutableAttributedString+GWMutableAttributedString.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BD824C23C2DA5B0057EAED /* NSMutableAttributedString+GWMutableAttributedString.m */; };
+		28BD827223C2DA5B0057EAED /* NSString+GWString.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BD824D23C2DA5B0057EAED /* NSString+GWString.m */; };
+		28BD827323C2DA5B0057EAED /* UITableViewCell+GW_AutoHeightForCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BD825023C2DA5B0057EAED /* UITableViewCell+GW_AutoHeightForCell.m */; };
+		28BD827423C2DA5B0057EAED /* NSArray+GWArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BD825423C2DA5B0057EAED /* NSArray+GWArray.m */; };
+		28BD827523C2DA5B0057EAED /* NSMutableArray+GWMutableArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BD825523C2DA5B0057EAED /* NSMutableArray+GWMutableArray.m */; };
+		28BD827623C2DA5B0057EAED /* NSDate+GWDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BD825823C2DA5B0057EAED /* NSDate+GWDate.m */; };
+		28BD827723C2DA5B0057EAED /* UITouch+GWTouch.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BD825A23C2DA5B0057EAED /* UITouch+GWTouch.m */; };
+		28BD827823C2DA5B0057EAED /* NSObject+GWObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BD825E23C2DA5B0057EAED /* NSObject+GWObject.m */; };
+		28BD827923C2DA5B0057EAED /* UIButton+GWButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BD826023C2DA5B0057EAED /* UIButton+GWButton.m */; };
+		28BD827A23C2DA5B0057EAED /* NSMutableDictionary+GWMutableDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BD826523C2DA5B0057EAED /* NSMutableDictionary+GWMutableDictionary.m */; };
+		28BD827B23C2DA5B0057EAED /* NSDictionary+GWDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BD826623C2DA5B0057EAED /* NSDictionary+GWDictionary.m */; };
+		28BD828323C2DA800057EAED /* TestTimeDeallocViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BD827F23C2DA800057EAED /* TestTimeDeallocViewController.m */; };
+		28BD828423C2DA800057EAED /* TwoTImeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BD828023C2DA800057EAED /* TwoTImeViewController.m */; };
+		28BD828523C2DA800057EAED /* ThreeTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BD828223C2DA800057EAED /* ThreeTimeViewController.m */; };
 		28D3370923BDFFCA00B17546 /* TestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D3370823BDFFCA00B17546 /* TestView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2824FB3723C027DD0052D662 /* ThreeTimeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThreeTimeViewController.h; sourceTree = "<group>"; };
-		2824FB3823C027DD0052D662 /* ThreeTimeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThreeTimeViewController.m; sourceTree = "<group>"; };
 		28466D4323B9ECA500407C3F /* GW_Category.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GW_Category.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28466D4623B9ECA500407C3F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		28466D4723B9ECA500407C3F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -57,61 +55,63 @@
 		28466D5523B9ECA600407C3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		28466D5723B9ECA600407C3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		28466D5823B9ECA600407C3F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		28466D6123B9ED7C00407C3F /* NSObject+GW_Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+GW_Model.m"; sourceTree = "<group>"; };
-		28466D6223B9ED7C00407C3F /* NSObject+GW_Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+GW_Model.h"; sourceTree = "<group>"; };
-		28466D6523B9ED7C00407C3F /* UIView+GW_AutoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+GW_AutoLayout.m"; sourceTree = "<group>"; };
-		28466D6723B9ED7C00407C3F /* GW_AutoLayoutUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW_AutoLayoutUtilities.h; sourceTree = "<group>"; };
-		28466D6823B9ED7C00407C3F /* UIView+GW_AutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+GW_AutoLayout.h"; sourceTree = "<group>"; };
-		28466D6A23B9ED7C00407C3F /* UIControl+GWControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+GWControl.m"; sourceTree = "<group>"; };
-		28466D6B23B9ED7C00407C3F /* UIControl+GWControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+GWControl.h"; sourceTree = "<group>"; };
-		28466D6D23B9ED7C00407C3F /* UIImageView+GWImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+GWImageView.h"; sourceTree = "<group>"; };
-		28466D6E23B9ED7C00407C3F /* UIImageView+GWImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+GWImageView.m"; sourceTree = "<group>"; };
-		28466D7023B9ED7C00407C3F /* UIImage+GWImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+GWImage.h"; sourceTree = "<group>"; };
-		28466D7123B9ED7C00407C3F /* UIImage+GWImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+GWImage.m"; sourceTree = "<group>"; };
-		28466D7323B9ED7C00407C3F /* NSString+GWString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+GWString.h"; sourceTree = "<group>"; };
-		28466D7423B9ED7C00407C3F /* NSMutableAttributedString+GWMutableAttributedString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+GWMutableAttributedString.h"; sourceTree = "<group>"; };
-		28466D7523B9ED7C00407C3F /* NSMutableAttributedString+GWMutableAttributedString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+GWMutableAttributedString.m"; sourceTree = "<group>"; };
-		28466D7623B9ED7C00407C3F /* NSString+GWString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+GWString.m"; sourceTree = "<group>"; };
-		28466D7823B9ED7C00407C3F /* UITableViewCell+GW_AutoHeightForCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+GW_AutoHeightForCell.h"; sourceTree = "<group>"; };
-		28466D7923B9ED7C00407C3F /* UITableViewCell+GW_AutoHeightForCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+GW_AutoHeightForCell.m"; sourceTree = "<group>"; };
-		28466D7B23B9ED7C00407C3F /* NSMutableArray+GWMutableArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+GWMutableArray.h"; sourceTree = "<group>"; };
-		28466D7C23B9ED7C00407C3F /* NSArray+GWArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+GWArray.h"; sourceTree = "<group>"; };
-		28466D7D23B9ED7C00407C3F /* NSArray+GWArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+GWArray.m"; sourceTree = "<group>"; };
-		28466D7E23B9ED7C00407C3F /* NSMutableArray+GWMutableArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+GWMutableArray.m"; sourceTree = "<group>"; };
-		28466D8023B9ED7C00407C3F /* NSDate+GWDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+GWDate.h"; sourceTree = "<group>"; };
-		28466D8123B9ED7C00407C3F /* NSDate+GWDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+GWDate.m"; sourceTree = "<group>"; };
-		28466D8323B9ED7C00407C3F /* NSObject+GWObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+GWObject.h"; sourceTree = "<group>"; };
-		28466D8423B9ED7C00407C3F /* NSObject+GWObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+GWObject.m"; sourceTree = "<group>"; };
-		28466D8623B9ED7C00407C3F /* UIButton+GWButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+GWButton.m"; sourceTree = "<group>"; };
-		28466D8723B9ED7C00407C3F /* UIButton+GWButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+GWButton.h"; sourceTree = "<group>"; };
-		28466D8923B9ED7C00407C3F /* NSMutableDictionary+GWMutableDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+GWMutableDictionary.h"; sourceTree = "<group>"; };
-		28466D8A23B9ED7C00407C3F /* NSDictionary+GWDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+GWDictionary.h"; sourceTree = "<group>"; };
-		28466D8B23B9ED7C00407C3F /* NSMutableDictionary+GWMutableDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+GWMutableDictionary.m"; sourceTree = "<group>"; };
-		28466D8C23B9ED7C00407C3F /* NSDictionary+GWDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+GWDictionary.m"; sourceTree = "<group>"; };
 		28466D9D23B9F25F00407C3F /* PopTestVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PopTestVC.h; sourceTree = "<group>"; };
 		28466D9E23B9F25F00407C3F /* PopTestVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PopTestVC.m; sourceTree = "<group>"; };
 		28466DA023B9FF7700407C3F /* Pop2ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Pop2ViewController.h; sourceTree = "<group>"; };
 		28466DA123B9FF7700407C3F /* Pop2ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Pop2ViewController.m; sourceTree = "<group>"; };
-		28466DA323BA006500407C3F /* UIViewController+GWViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+GWViewController.h"; sourceTree = "<group>"; };
-		28466DA423BA006500407C3F /* UIViewController+GWViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+GWViewController.m"; sourceTree = "<group>"; };
 		28594B2A23BF0AC90046C955 /* Pop3VCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Pop3VCViewController.h; sourceTree = "<group>"; };
 		28594B2B23BF0AC90046C955 /* Pop3VCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Pop3VCViewController.m; sourceTree = "<group>"; };
 		28594B2D23BF3A4D0046C955 /* MianTBController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MianTBController.h; sourceTree = "<group>"; };
 		28594B2E23BF3A4D0046C955 /* MianTBController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MianTBController.m; sourceTree = "<group>"; };
-		28594B3123BF3CFB0046C955 /* TestTimeDeallocViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestTimeDeallocViewController.h; sourceTree = "<group>"; };
-		28594B3223BF3CFB0046C955 /* TestTimeDeallocViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestTimeDeallocViewController.m; sourceTree = "<group>"; };
-		28594B3823BF44670046C955 /* TwoTImeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TwoTImeViewController.h; sourceTree = "<group>"; };
-		28594B3923BF44670046C955 /* TwoTImeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TwoTImeViewController.m; sourceTree = "<group>"; };
-		28D336C723BDC1BB00B17546 /* UIApplication+GWApplication.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIApplication+GWApplication.h"; sourceTree = "<group>"; };
-		28D336C823BDC1BB00B17546 /* UIApplication+GWApplication.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+GWApplication.m"; sourceTree = "<group>"; };
-		28D336D423BDD01B00B17546 /* UITouch+GWTouch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITouch+GWTouch.h"; sourceTree = "<group>"; };
-		28D336D523BDD01B00B17546 /* UITouch+GWTouch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITouch+GWTouch.m"; sourceTree = "<group>"; };
-		28D336D823BDDA6900B17546 /* UINavigationController+GWNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+GWNavigationController.h"; sourceTree = "<group>"; };
-		28D336D923BDDA6900B17546 /* UINavigationController+GWNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+GWNavigationController.m"; sourceTree = "<group>"; };
-		28D336FE23BDF91F00B17546 /* UITabBarController+GWTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITabBarController+GWTabBarController.h"; sourceTree = "<group>"; };
-		28D336FF23BDF91F00B17546 /* UITabBarController+GWTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITabBarController+GWTabBarController.m"; sourceTree = "<group>"; };
-		28D3370123BDF9B800B17546 /* UIPageViewController+GWPageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIPageViewController+GWPageViewController.h"; sourceTree = "<group>"; };
-		28D3370223BDF9B800B17546 /* UIPageViewController+GWPageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIPageViewController+GWPageViewController.m"; sourceTree = "<group>"; };
+		28BD822E23C2DA5B0057EAED /* NSObject+GW_Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+GW_Model.m"; sourceTree = "<group>"; };
+		28BD822F23C2DA5B0057EAED /* NSObject+GW_Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+GW_Model.h"; sourceTree = "<group>"; };
+		28BD823123C2DA5B0057EAED /* UIView+GW_AutoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+GW_AutoLayout.m"; sourceTree = "<group>"; };
+		28BD823223C2DA5B0057EAED /* GW_AutoLayoutUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW_AutoLayoutUtilities.h; sourceTree = "<group>"; };
+		28BD823323C2DA5B0057EAED /* UIView+GW_AutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+GW_AutoLayout.h"; sourceTree = "<group>"; };
+		28BD823523C2DA5B0057EAED /* UIControl+GWControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+GWControl.m"; sourceTree = "<group>"; };
+		28BD823623C2DA5B0057EAED /* UIControl+GWControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+GWControl.h"; sourceTree = "<group>"; };
+		28BD823823C2DA5B0057EAED /* UIImageView+GWImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+GWImageView.h"; sourceTree = "<group>"; };
+		28BD823923C2DA5B0057EAED /* UIImageView+GWImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+GWImageView.m"; sourceTree = "<group>"; };
+		28BD823B23C2DA5B0057EAED /* UITabBarController+GWTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBarController+GWTabBarController.h"; sourceTree = "<group>"; };
+		28BD823C23C2DA5B0057EAED /* UIPageViewController+GWPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIPageViewController+GWPageViewController.h"; sourceTree = "<group>"; };
+		28BD823D23C2DA5B0057EAED /* UINavigationController+GWNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+GWNavigationController.m"; sourceTree = "<group>"; };
+		28BD823E23C2DA5B0057EAED /* UIViewController+GWViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+GWViewController.h"; sourceTree = "<group>"; };
+		28BD823F23C2DA5B0057EAED /* UITabBarController+GWTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBarController+GWTabBarController.m"; sourceTree = "<group>"; };
+		28BD824023C2DA5B0057EAED /* UINavigationController+GWNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+GWNavigationController.h"; sourceTree = "<group>"; };
+		28BD824123C2DA5B0057EAED /* UIPageViewController+GWPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIPageViewController+GWPageViewController.m"; sourceTree = "<group>"; };
+		28BD824223C2DA5B0057EAED /* UIViewController+GWViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+GWViewController.m"; sourceTree = "<group>"; };
+		28BD824423C2DA5B0057EAED /* UIApplication+GWApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+GWApplication.h"; sourceTree = "<group>"; };
+		28BD824523C2DA5B0057EAED /* UIApplication+GWApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+GWApplication.m"; sourceTree = "<group>"; };
+		28BD824723C2DA5B0057EAED /* UIImage+GWImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+GWImage.h"; sourceTree = "<group>"; };
+		28BD824823C2DA5B0057EAED /* UIImage+GWImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+GWImage.m"; sourceTree = "<group>"; };
+		28BD824A23C2DA5B0057EAED /* NSString+GWString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+GWString.h"; sourceTree = "<group>"; };
+		28BD824B23C2DA5B0057EAED /* NSMutableAttributedString+GWMutableAttributedString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+GWMutableAttributedString.h"; sourceTree = "<group>"; };
+		28BD824C23C2DA5B0057EAED /* NSMutableAttributedString+GWMutableAttributedString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+GWMutableAttributedString.m"; sourceTree = "<group>"; };
+		28BD824D23C2DA5B0057EAED /* NSString+GWString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+GWString.m"; sourceTree = "<group>"; };
+		28BD824F23C2DA5B0057EAED /* UITableViewCell+GW_AutoHeightForCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+GW_AutoHeightForCell.h"; sourceTree = "<group>"; };
+		28BD825023C2DA5B0057EAED /* UITableViewCell+GW_AutoHeightForCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+GW_AutoHeightForCell.m"; sourceTree = "<group>"; };
+		28BD825223C2DA5B0057EAED /* NSMutableArray+GWMutableArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+GWMutableArray.h"; sourceTree = "<group>"; };
+		28BD825323C2DA5B0057EAED /* NSArray+GWArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+GWArray.h"; sourceTree = "<group>"; };
+		28BD825423C2DA5B0057EAED /* NSArray+GWArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+GWArray.m"; sourceTree = "<group>"; };
+		28BD825523C2DA5B0057EAED /* NSMutableArray+GWMutableArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+GWMutableArray.m"; sourceTree = "<group>"; };
+		28BD825723C2DA5B0057EAED /* NSDate+GWDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+GWDate.h"; sourceTree = "<group>"; };
+		28BD825823C2DA5B0057EAED /* NSDate+GWDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+GWDate.m"; sourceTree = "<group>"; };
+		28BD825A23C2DA5B0057EAED /* UITouch+GWTouch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITouch+GWTouch.m"; sourceTree = "<group>"; };
+		28BD825B23C2DA5B0057EAED /* UITouch+GWTouch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITouch+GWTouch.h"; sourceTree = "<group>"; };
+		28BD825D23C2DA5B0057EAED /* NSObject+GWObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+GWObject.h"; sourceTree = "<group>"; };
+		28BD825E23C2DA5B0057EAED /* NSObject+GWObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+GWObject.m"; sourceTree = "<group>"; };
+		28BD826023C2DA5B0057EAED /* UIButton+GWButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+GWButton.m"; sourceTree = "<group>"; };
+		28BD826123C2DA5B0057EAED /* UIButton+GWButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+GWButton.h"; sourceTree = "<group>"; };
+		28BD826323C2DA5B0057EAED /* NSMutableDictionary+GWMutableDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+GWMutableDictionary.h"; sourceTree = "<group>"; };
+		28BD826423C2DA5B0057EAED /* NSDictionary+GWDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+GWDictionary.h"; sourceTree = "<group>"; };
+		28BD826523C2DA5B0057EAED /* NSMutableDictionary+GWMutableDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+GWMutableDictionary.m"; sourceTree = "<group>"; };
+		28BD826623C2DA5B0057EAED /* NSDictionary+GWDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+GWDictionary.m"; sourceTree = "<group>"; };
+		28BD827D23C2DA800057EAED /* TwoTImeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwoTImeViewController.h; sourceTree = "<group>"; };
+		28BD827E23C2DA800057EAED /* ThreeTimeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThreeTimeViewController.h; sourceTree = "<group>"; };
+		28BD827F23C2DA800057EAED /* TestTimeDeallocViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestTimeDeallocViewController.m; sourceTree = "<group>"; };
+		28BD828023C2DA800057EAED /* TwoTImeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwoTImeViewController.m; sourceTree = "<group>"; };
+		28BD828123C2DA800057EAED /* TestTimeDeallocViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestTimeDeallocViewController.h; sourceTree = "<group>"; };
+		28BD828223C2DA800057EAED /* ThreeTimeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThreeTimeViewController.m; sourceTree = "<group>"; };
 		28D3370723BDFFCA00B17546 /* TestView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestView.h; sourceTree = "<group>"; };
 		28D3370823BDFFCA00B17546 /* TestView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -146,12 +146,12 @@
 		28466D4523B9ECA500407C3F /* GW_Category */ = {
 			isa = PBXGroup;
 			children = (
-				28466D5F23B9ED7C00407C3F /* GW_Category */,
+				28BD822C23C2DA5B0057EAED /* GW_Category */,
 				28466D4623B9ECA500407C3F /* AppDelegate.h */,
 				28466D4723B9ECA500407C3F /* AppDelegate.m */,
 				28594B2D23BF3A4D0046C955 /* MianTBController.h */,
 				28594B2E23BF3A4D0046C955 /* MianTBController.m */,
-				28594B3423BF3D030046C955 /* 测试定时器释放 */,
+				28BD827C23C2DA800057EAED /* 测试定时器释放 */,
 				28594B3023BF3C590046C955 /* 测试内存泄漏 */,
 				28D3370723BDFFCA00B17546 /* TestView.h */,
 				28D3370823BDFFCA00B17546 /* TestView.m */,
@@ -162,158 +162,6 @@
 				28466D5823B9ECA600407C3F /* main.m */,
 			);
 			path = GW_Category;
-			sourceTree = "<group>";
-		};
-		28466D5F23B9ED7C00407C3F /* GW_Category */ = {
-			isa = PBXGroup;
-			children = (
-				28466D6023B9ED7C00407C3F /* GW_ModelKit */,
-				28466D6323B9ED7C00407C3F /* GW_View */,
-				28466D6923B9ED7C00407C3F /* GW_Control */,
-				28466D6C23B9ED7C00407C3F /* GW_ImageView */,
-				28466D6F23B9ED7C00407C3F /* GW_Image */,
-				28466D7223B9ED7C00407C3F /* GW_String */,
-				28466D7723B9ED7C00407C3F /* GW_TableViewCell */,
-				28466D7A23B9ED7C00407C3F /* GW_Array */,
-				28466D7F23B9ED7C00407C3F /* GW_Date */,
-				28466D8223B9ED7C00407C3F /* GW_Object */,
-				28466D8523B9ED7C00407C3F /* GW_Button */,
-				28466D8823B9ED7C00407C3F /* GW_Dictionary */,
-				28466DA623BA007200407C3F /* GW_ViewController */,
-				28D336CA23BDC1C500B17546 /* GW_Application */,
-				28D336D723BDD02200B17546 /* GW_Touch */,
-			);
-			path = GW_Category;
-			sourceTree = "<group>";
-		};
-		28466D6023B9ED7C00407C3F /* GW_ModelKit */ = {
-			isa = PBXGroup;
-			children = (
-				28466D6223B9ED7C00407C3F /* NSObject+GW_Model.h */,
-				28466D6123B9ED7C00407C3F /* NSObject+GW_Model.m */,
-			);
-			path = GW_ModelKit;
-			sourceTree = "<group>";
-		};
-		28466D6323B9ED7C00407C3F /* GW_View */ = {
-			isa = PBXGroup;
-			children = (
-				28466D6723B9ED7C00407C3F /* GW_AutoLayoutUtilities.h */,
-				28466D6823B9ED7C00407C3F /* UIView+GW_AutoLayout.h */,
-				28466D6523B9ED7C00407C3F /* UIView+GW_AutoLayout.m */,
-			);
-			path = GW_View;
-			sourceTree = "<group>";
-		};
-		28466D6923B9ED7C00407C3F /* GW_Control */ = {
-			isa = PBXGroup;
-			children = (
-				28466D6B23B9ED7C00407C3F /* UIControl+GWControl.h */,
-				28466D6A23B9ED7C00407C3F /* UIControl+GWControl.m */,
-			);
-			path = GW_Control;
-			sourceTree = "<group>";
-		};
-		28466D6C23B9ED7C00407C3F /* GW_ImageView */ = {
-			isa = PBXGroup;
-			children = (
-				28466D6D23B9ED7C00407C3F /* UIImageView+GWImageView.h */,
-				28466D6E23B9ED7C00407C3F /* UIImageView+GWImageView.m */,
-			);
-			path = GW_ImageView;
-			sourceTree = "<group>";
-		};
-		28466D6F23B9ED7C00407C3F /* GW_Image */ = {
-			isa = PBXGroup;
-			children = (
-				28466D7023B9ED7C00407C3F /* UIImage+GWImage.h */,
-				28466D7123B9ED7C00407C3F /* UIImage+GWImage.m */,
-			);
-			path = GW_Image;
-			sourceTree = "<group>";
-		};
-		28466D7223B9ED7C00407C3F /* GW_String */ = {
-			isa = PBXGroup;
-			children = (
-				28466D7423B9ED7C00407C3F /* NSMutableAttributedString+GWMutableAttributedString.h */,
-				28466D7523B9ED7C00407C3F /* NSMutableAttributedString+GWMutableAttributedString.m */,
-				28466D7323B9ED7C00407C3F /* NSString+GWString.h */,
-				28466D7623B9ED7C00407C3F /* NSString+GWString.m */,
-			);
-			path = GW_String;
-			sourceTree = "<group>";
-		};
-		28466D7723B9ED7C00407C3F /* GW_TableViewCell */ = {
-			isa = PBXGroup;
-			children = (
-				28466D7823B9ED7C00407C3F /* UITableViewCell+GW_AutoHeightForCell.h */,
-				28466D7923B9ED7C00407C3F /* UITableViewCell+GW_AutoHeightForCell.m */,
-			);
-			path = GW_TableViewCell;
-			sourceTree = "<group>";
-		};
-		28466D7A23B9ED7C00407C3F /* GW_Array */ = {
-			isa = PBXGroup;
-			children = (
-				28466D7B23B9ED7C00407C3F /* NSMutableArray+GWMutableArray.h */,
-				28466D7C23B9ED7C00407C3F /* NSArray+GWArray.h */,
-				28466D7D23B9ED7C00407C3F /* NSArray+GWArray.m */,
-				28466D7E23B9ED7C00407C3F /* NSMutableArray+GWMutableArray.m */,
-			);
-			path = GW_Array;
-			sourceTree = "<group>";
-		};
-		28466D7F23B9ED7C00407C3F /* GW_Date */ = {
-			isa = PBXGroup;
-			children = (
-				28466D8023B9ED7C00407C3F /* NSDate+GWDate.h */,
-				28466D8123B9ED7C00407C3F /* NSDate+GWDate.m */,
-			);
-			path = GW_Date;
-			sourceTree = "<group>";
-		};
-		28466D8223B9ED7C00407C3F /* GW_Object */ = {
-			isa = PBXGroup;
-			children = (
-				28466D8323B9ED7C00407C3F /* NSObject+GWObject.h */,
-				28466D8423B9ED7C00407C3F /* NSObject+GWObject.m */,
-			);
-			path = GW_Object;
-			sourceTree = "<group>";
-		};
-		28466D8523B9ED7C00407C3F /* GW_Button */ = {
-			isa = PBXGroup;
-			children = (
-				28466D8723B9ED7C00407C3F /* UIButton+GWButton.h */,
-				28466D8623B9ED7C00407C3F /* UIButton+GWButton.m */,
-			);
-			path = GW_Button;
-			sourceTree = "<group>";
-		};
-		28466D8823B9ED7C00407C3F /* GW_Dictionary */ = {
-			isa = PBXGroup;
-			children = (
-				28466D8923B9ED7C00407C3F /* NSMutableDictionary+GWMutableDictionary.h */,
-				28466D8A23B9ED7C00407C3F /* NSDictionary+GWDictionary.h */,
-				28466D8B23B9ED7C00407C3F /* NSMutableDictionary+GWMutableDictionary.m */,
-				28466D8C23B9ED7C00407C3F /* NSDictionary+GWDictionary.m */,
-			);
-			path = GW_Dictionary;
-			sourceTree = "<group>";
-		};
-		28466DA623BA007200407C3F /* GW_ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				28466DA323BA006500407C3F /* UIViewController+GWViewController.h */,
-				28466DA423BA006500407C3F /* UIViewController+GWViewController.m */,
-				28D336D823BDDA6900B17546 /* UINavigationController+GWNavigationController.h */,
-				28D336D923BDDA6900B17546 /* UINavigationController+GWNavigationController.m */,
-				28D336FE23BDF91F00B17546 /* UITabBarController+GWTabBarController.h */,
-				28D336FF23BDF91F00B17546 /* UITabBarController+GWTabBarController.m */,
-				28D3370123BDF9B800B17546 /* UIPageViewController+GWPageViewController.h */,
-				28D3370223BDF9B800B17546 /* UIPageViewController+GWPageViewController.m */,
-			);
-			path = GW_ViewController;
 			sourceTree = "<group>";
 		};
 		28594B3023BF3C590046C955 /* 测试内存泄漏 */ = {
@@ -331,35 +179,187 @@
 			path = "测试内存泄漏";
 			sourceTree = "<group>";
 		};
-		28594B3423BF3D030046C955 /* 测试定时器释放 */ = {
+		28BD822C23C2DA5B0057EAED /* GW_Category */ = {
 			isa = PBXGroup;
 			children = (
-				28594B3123BF3CFB0046C955 /* TestTimeDeallocViewController.h */,
-				28594B3223BF3CFB0046C955 /* TestTimeDeallocViewController.m */,
-				28594B3823BF44670046C955 /* TwoTImeViewController.h */,
-				28594B3923BF44670046C955 /* TwoTImeViewController.m */,
-				2824FB3723C027DD0052D662 /* ThreeTimeViewController.h */,
-				2824FB3823C027DD0052D662 /* ThreeTimeViewController.m */,
+				28BD822D23C2DA5B0057EAED /* GW_ModelKit */,
+				28BD823023C2DA5B0057EAED /* GW_View */,
+				28BD823423C2DA5B0057EAED /* GW_Control */,
+				28BD823723C2DA5B0057EAED /* GW_ImageView */,
+				28BD823A23C2DA5B0057EAED /* GW_ViewController */,
+				28BD824323C2DA5B0057EAED /* GW_Application */,
+				28BD824623C2DA5B0057EAED /* GW_Image */,
+				28BD824923C2DA5B0057EAED /* GW_String */,
+				28BD824E23C2DA5B0057EAED /* GW_TableViewCell */,
+				28BD825123C2DA5B0057EAED /* GW_Array */,
+				28BD825623C2DA5B0057EAED /* GW_Date */,
+				28BD825923C2DA5B0057EAED /* GW_Touch */,
+				28BD825C23C2DA5B0057EAED /* GW_Object */,
+				28BD825F23C2DA5B0057EAED /* GW_Button */,
+				28BD826223C2DA5B0057EAED /* GW_Dictionary */,
 			);
-			path = "测试定时器释放";
+			path = GW_Category;
 			sourceTree = "<group>";
 		};
-		28D336CA23BDC1C500B17546 /* GW_Application */ = {
+		28BD822D23C2DA5B0057EAED /* GW_ModelKit */ = {
 			isa = PBXGroup;
 			children = (
-				28D336C723BDC1BB00B17546 /* UIApplication+GWApplication.h */,
-				28D336C823BDC1BB00B17546 /* UIApplication+GWApplication.m */,
+				28BD822E23C2DA5B0057EAED /* NSObject+GW_Model.m */,
+				28BD822F23C2DA5B0057EAED /* NSObject+GW_Model.h */,
+			);
+			path = GW_ModelKit;
+			sourceTree = "<group>";
+		};
+		28BD823023C2DA5B0057EAED /* GW_View */ = {
+			isa = PBXGroup;
+			children = (
+				28BD823123C2DA5B0057EAED /* UIView+GW_AutoLayout.m */,
+				28BD823223C2DA5B0057EAED /* GW_AutoLayoutUtilities.h */,
+				28BD823323C2DA5B0057EAED /* UIView+GW_AutoLayout.h */,
+			);
+			path = GW_View;
+			sourceTree = "<group>";
+		};
+		28BD823423C2DA5B0057EAED /* GW_Control */ = {
+			isa = PBXGroup;
+			children = (
+				28BD823523C2DA5B0057EAED /* UIControl+GWControl.m */,
+				28BD823623C2DA5B0057EAED /* UIControl+GWControl.h */,
+			);
+			path = GW_Control;
+			sourceTree = "<group>";
+		};
+		28BD823723C2DA5B0057EAED /* GW_ImageView */ = {
+			isa = PBXGroup;
+			children = (
+				28BD823823C2DA5B0057EAED /* UIImageView+GWImageView.h */,
+				28BD823923C2DA5B0057EAED /* UIImageView+GWImageView.m */,
+			);
+			path = GW_ImageView;
+			sourceTree = "<group>";
+		};
+		28BD823A23C2DA5B0057EAED /* GW_ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				28BD824023C2DA5B0057EAED /* UINavigationController+GWNavigationController.h */,
+				28BD823D23C2DA5B0057EAED /* UINavigationController+GWNavigationController.m */,
+				28BD823C23C2DA5B0057EAED /* UIPageViewController+GWPageViewController.h */,
+				28BD824123C2DA5B0057EAED /* UIPageViewController+GWPageViewController.m */,
+				28BD823B23C2DA5B0057EAED /* UITabBarController+GWTabBarController.h */,
+				28BD823F23C2DA5B0057EAED /* UITabBarController+GWTabBarController.m */,
+				28BD823E23C2DA5B0057EAED /* UIViewController+GWViewController.h */,
+				28BD824223C2DA5B0057EAED /* UIViewController+GWViewController.m */,
+			);
+			path = GW_ViewController;
+			sourceTree = "<group>";
+		};
+		28BD824323C2DA5B0057EAED /* GW_Application */ = {
+			isa = PBXGroup;
+			children = (
+				28BD824423C2DA5B0057EAED /* UIApplication+GWApplication.h */,
+				28BD824523C2DA5B0057EAED /* UIApplication+GWApplication.m */,
 			);
 			path = GW_Application;
 			sourceTree = "<group>";
 		};
-		28D336D723BDD02200B17546 /* GW_Touch */ = {
+		28BD824623C2DA5B0057EAED /* GW_Image */ = {
 			isa = PBXGroup;
 			children = (
-				28D336D423BDD01B00B17546 /* UITouch+GWTouch.h */,
-				28D336D523BDD01B00B17546 /* UITouch+GWTouch.m */,
+				28BD824723C2DA5B0057EAED /* UIImage+GWImage.h */,
+				28BD824823C2DA5B0057EAED /* UIImage+GWImage.m */,
+			);
+			path = GW_Image;
+			sourceTree = "<group>";
+		};
+		28BD824923C2DA5B0057EAED /* GW_String */ = {
+			isa = PBXGroup;
+			children = (
+				28BD824A23C2DA5B0057EAED /* NSString+GWString.h */,
+				28BD824B23C2DA5B0057EAED /* NSMutableAttributedString+GWMutableAttributedString.h */,
+				28BD824C23C2DA5B0057EAED /* NSMutableAttributedString+GWMutableAttributedString.m */,
+				28BD824D23C2DA5B0057EAED /* NSString+GWString.m */,
+			);
+			path = GW_String;
+			sourceTree = "<group>";
+		};
+		28BD824E23C2DA5B0057EAED /* GW_TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				28BD824F23C2DA5B0057EAED /* UITableViewCell+GW_AutoHeightForCell.h */,
+				28BD825023C2DA5B0057EAED /* UITableViewCell+GW_AutoHeightForCell.m */,
+			);
+			path = GW_TableViewCell;
+			sourceTree = "<group>";
+		};
+		28BD825123C2DA5B0057EAED /* GW_Array */ = {
+			isa = PBXGroup;
+			children = (
+				28BD825223C2DA5B0057EAED /* NSMutableArray+GWMutableArray.h */,
+				28BD825323C2DA5B0057EAED /* NSArray+GWArray.h */,
+				28BD825423C2DA5B0057EAED /* NSArray+GWArray.m */,
+				28BD825523C2DA5B0057EAED /* NSMutableArray+GWMutableArray.m */,
+			);
+			path = GW_Array;
+			sourceTree = "<group>";
+		};
+		28BD825623C2DA5B0057EAED /* GW_Date */ = {
+			isa = PBXGroup;
+			children = (
+				28BD825723C2DA5B0057EAED /* NSDate+GWDate.h */,
+				28BD825823C2DA5B0057EAED /* NSDate+GWDate.m */,
+			);
+			path = GW_Date;
+			sourceTree = "<group>";
+		};
+		28BD825923C2DA5B0057EAED /* GW_Touch */ = {
+			isa = PBXGroup;
+			children = (
+				28BD825A23C2DA5B0057EAED /* UITouch+GWTouch.m */,
+				28BD825B23C2DA5B0057EAED /* UITouch+GWTouch.h */,
 			);
 			path = GW_Touch;
+			sourceTree = "<group>";
+		};
+		28BD825C23C2DA5B0057EAED /* GW_Object */ = {
+			isa = PBXGroup;
+			children = (
+				28BD825D23C2DA5B0057EAED /* NSObject+GWObject.h */,
+				28BD825E23C2DA5B0057EAED /* NSObject+GWObject.m */,
+			);
+			path = GW_Object;
+			sourceTree = "<group>";
+		};
+		28BD825F23C2DA5B0057EAED /* GW_Button */ = {
+			isa = PBXGroup;
+			children = (
+				28BD826023C2DA5B0057EAED /* UIButton+GWButton.m */,
+				28BD826123C2DA5B0057EAED /* UIButton+GWButton.h */,
+			);
+			path = GW_Button;
+			sourceTree = "<group>";
+		};
+		28BD826223C2DA5B0057EAED /* GW_Dictionary */ = {
+			isa = PBXGroup;
+			children = (
+				28BD826323C2DA5B0057EAED /* NSMutableDictionary+GWMutableDictionary.h */,
+				28BD826423C2DA5B0057EAED /* NSDictionary+GWDictionary.h */,
+				28BD826523C2DA5B0057EAED /* NSMutableDictionary+GWMutableDictionary.m */,
+				28BD826623C2DA5B0057EAED /* NSDictionary+GWDictionary.m */,
+			);
+			path = GW_Dictionary;
+			sourceTree = "<group>";
+		};
+		28BD827C23C2DA800057EAED /* 测试定时器释放 */ = {
+			isa = PBXGroup;
+			children = (
+				28BD828123C2DA800057EAED /* TestTimeDeallocViewController.h */,
+				28BD827F23C2DA800057EAED /* TestTimeDeallocViewController.m */,
+				28BD827E23C2DA800057EAED /* ThreeTimeViewController.h */,
+				28BD828223C2DA800057EAED /* ThreeTimeViewController.m */,
+				28BD827D23C2DA800057EAED /* TwoTImeViewController.h */,
+				28BD828023C2DA800057EAED /* TwoTImeViewController.m */,
+			);
+			path = "测试定时器释放";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -432,38 +432,38 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28466D9823B9ED7C00407C3F /* NSDate+GWDate.m in Sources */,
-				28D336DA23BDDA6900B17546 /* UINavigationController+GWNavigationController.m in Sources */,
-				28594B3323BF3CFB0046C955 /* TestTimeDeallocViewController.m in Sources */,
-				28466D9923B9ED7C00407C3F /* NSObject+GWObject.m in Sources */,
+				28BD827623C2DA5B0057EAED /* NSDate+GWDate.m in Sources */,
+				28BD827423C2DA5B0057EAED /* NSArray+GWArray.m in Sources */,
+				28BD828323C2DA800057EAED /* TestTimeDeallocViewController.m in Sources */,
+				28BD827A23C2DA5B0057EAED /* NSMutableDictionary+GWMutableDictionary.m in Sources */,
 				28466D9F23B9F25F00407C3F /* PopTestVC.m in Sources */,
-				28466D9623B9ED7C00407C3F /* NSArray+GWArray.m in Sources */,
-				28466D9123B9ED7C00407C3F /* UIImageView+GWImageView.m in Sources */,
-				28D3370023BDF91F00B17546 /* UITabBarController+GWTabBarController.m in Sources */,
-				28D3370323BDF9B800B17546 /* UIPageViewController+GWPageViewController.m in Sources */,
-				28466D9C23B9ED7C00407C3F /* NSDictionary+GWDictionary.m in Sources */,
-				28D336C923BDC1BB00B17546 /* UIApplication+GWApplication.m in Sources */,
+				28BD826823C2DA5B0057EAED /* UIView+GW_AutoLayout.m in Sources */,
+				28BD827B23C2DA5B0057EAED /* NSDictionary+GWDictionary.m in Sources */,
+				28BD826923C2DA5B0057EAED /* UIControl+GWControl.m in Sources */,
+				28BD827023C2DA5B0057EAED /* UIImage+GWImage.m in Sources */,
+				28BD826A23C2DA5B0057EAED /* UIImageView+GWImageView.m in Sources */,
 				28466D4E23B9ECA500407C3F /* TestMemoryLeakViewController.m in Sources */,
+				28BD827523C2DA5B0057EAED /* NSMutableArray+GWMutableArray.m in Sources */,
+				28BD826C23C2DA5B0057EAED /* UITabBarController+GWTabBarController.m in Sources */,
 				28466DA223B9FF7700407C3F /* Pop2ViewController.m in Sources */,
-				28466D9B23B9ED7C00407C3F /* NSMutableDictionary+GWMutableDictionary.m in Sources */,
-				28466D9A23B9ED7C00407C3F /* UIButton+GWButton.m in Sources */,
-				28466D9023B9ED7C00407C3F /* UIControl+GWControl.m in Sources */,
-				28466D8D23B9ED7C00407C3F /* NSObject+GW_Model.m in Sources */,
+				28BD826B23C2DA5B0057EAED /* UINavigationController+GWNavigationController.m in Sources */,
+				28BD827323C2DA5B0057EAED /* UITableViewCell+GW_AutoHeightForCell.m in Sources */,
+				28BD826723C2DA5B0057EAED /* NSObject+GW_Model.m in Sources */,
 				28D3370923BDFFCA00B17546 /* TestView.m in Sources */,
-				28594B3A23BF44670046C955 /* TwoTImeViewController.m in Sources */,
-				28D336D623BDD01B00B17546 /* UITouch+GWTouch.m in Sources */,
+				28BD828423C2DA800057EAED /* TwoTImeViewController.m in Sources */,
+				28BD826F23C2DA5B0057EAED /* UIApplication+GWApplication.m in Sources */,
+				28BD827823C2DA5B0057EAED /* NSObject+GWObject.m in Sources */,
+				28BD826D23C2DA5B0057EAED /* UIPageViewController+GWPageViewController.m in Sources */,
+				28BD826E23C2DA5B0057EAED /* UIViewController+GWViewController.m in Sources */,
+				28BD827223C2DA5B0057EAED /* NSString+GWString.m in Sources */,
 				28466D4823B9ECA500407C3F /* AppDelegate.m in Sources */,
-				28466D9723B9ED7C00407C3F /* NSMutableArray+GWMutableArray.m in Sources */,
 				28466D5923B9ECA600407C3F /* main.m in Sources */,
-				28466D9223B9ED7C00407C3F /* UIImage+GWImage.m in Sources */,
-				28466DA523BA006500407C3F /* UIViewController+GWViewController.m in Sources */,
+				28BD828523C2DA800057EAED /* ThreeTimeViewController.m in Sources */,
+				28BD827123C2DA5B0057EAED /* NSMutableAttributedString+GWMutableAttributedString.m in Sources */,
+				28BD827923C2DA5B0057EAED /* UIButton+GWButton.m in Sources */,
 				28594B2C23BF0AC90046C955 /* Pop3VCViewController.m in Sources */,
-				2824FB3923C027DD0052D662 /* ThreeTimeViewController.m in Sources */,
-				28466D8F23B9ED7C00407C3F /* UIView+GW_AutoLayout.m in Sources */,
-				28466D9523B9ED7C00407C3F /* UITableViewCell+GW_AutoHeightForCell.m in Sources */,
-				28466D9423B9ED7C00407C3F /* NSString+GWString.m in Sources */,
 				28594B2F23BF3A4D0046C955 /* MianTBController.m in Sources */,
-				28466D9323B9ED7C00407C3F /* NSMutableAttributedString+GWMutableAttributedString.m in Sources */,
+				28BD827723C2DA5B0057EAED /* UITouch+GWTouch.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,14 +12,3 @@
 
 @end
 
-@implementation UITabBarController (GWTabBarController_MemoryLeak)
-
-//- (BOOL)willDealloc {
-//    if (![super willDealloc]) {
-//        return NO;
-//    }
-//    [self willReleaseChildren:self.viewControllers];
-//    return YES;
-//}
-
-@end

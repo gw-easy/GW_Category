@@ -19,6 +19,7 @@
         [self exchangeInstanceOriginalSelector_GW:@selector(popViewControllerAnimated:) swizzledSelector:@selector(gw_popViewControllerAnimated:)];
         [self exchangeInstanceOriginalSelector_GW:@selector(popToViewController:animated:) swizzledSelector:@selector(gw_popToViewController:animated:)];
         [self exchangeInstanceOriginalSelector_GW:@selector(popToRootViewControllerAnimated:) swizzledSelector:@selector(gw_popToRootViewControllerAnimated:)];
+        [self exchangeInstanceOriginalSelector_GW:@selector(setViewControllers:animated:) swizzledSelector:@selector(gw_setViewControllers:animated:)];
     });
 }
 
@@ -75,5 +76,34 @@
     }
     return poppedViewControllers;
 }
+
+- (void)gw_setViewControllers:(NSArray<UIViewController *> *)viewControllers animated:(BOOL)animated{
+    if (!viewControllers || viewControllers.count < 1) {
+        return;
+    }
+    NSPredicate * filterPredicate = [NSPredicate predicateWithFormat:@"NOT (SELF IN %@)",viewControllers];
+    NSArray * reslutFilteredArray = [self.viewControllers filteredArrayUsingPredicate:filterPredicate];
+    for (UIViewController *viewController in reslutFilteredArray) {
+        [viewController setGw_isDidDisappearAndDeallocVC:YES];
+        [viewController viewDidDisappear:NO];
+    }
+    [self gw_setViewControllers:viewControllers animated:animated];
+}
+
+//销毁子控制器
+- (void)GW_RemoveNavSubVC:(Class)removeC{
+    if (self.viewControllers) {
+        NSMutableArray *array = self.viewControllers.mutableCopy;
+        for (UIViewController *troll in array) {
+            if ([troll isKindOfClass:removeC]) {
+                [array removeObject:troll];
+                break;
+            }
+        }
+        [self setViewControllers:array animated:NO];
+    }
+}
+
+
 
 @end

@@ -10,6 +10,8 @@
 #import "UIViewController+GWViewController.h"
 #import "TestTimeDeallocViewController.h"
 #import "TwoTImeViewController.h"
+#import "UINavigationController+GWNavigationController.h"
+
 @interface ThreeTimeViewController ()
 @property (strong ,nonatomic) NSTimer *oneTime;
 
@@ -28,16 +30,16 @@
     TwoTImeViewController *popVC = [TwoTImeViewController new];
 //    TestTimeDeallocViewController *popVC = [TestTimeDeallocViewController new];
     popVC.index = self.index+1;
-    UINavigationController *popNav = [[UINavigationController alloc] initWithRootViewController:popVC];
-    [self presentViewController:popNav animated:YES completion:nil];
-//    [self.navigationController pushViewController:popVC animated:YES];
+//    UINavigationController *popNav = [[UINavigationController alloc] initWithRootViewController:popVC];
+//    [self presentViewController:popNav animated:YES completion:nil];
+    [self.navigationController pushViewController:popVC animated:YES];
 }
 
 - (void)btn2Action{
 //    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
 //    [self gw_dismissToRootViewControllerAnimated:YES];
 //    [self.navigationController popViewControllerAnimated:YES];
-//    [self.navigationController popToRootViewControllerAnimated:YES];
+    [self.navigationController popToRootViewControllerAnimated:YES];
 //    for (UIViewController *subVC in self.navigationController.childViewControllers) {
 //        if ([subVC isKindOfClass:[TestTimeDeallocViewController class]]) {
 //            [self.navigationController popToViewController:subVC animated:YES];
@@ -45,6 +47,8 @@
 //        }
 //    }
     [self gw_dismissToViewController:@"TestTimeDeallocViewController" animated:YES];
+    
+//    [self.navigationController GW_RemoveNavSubVC:[TwoTImeViewController class]];
 }
 
 #pragma mark - UI

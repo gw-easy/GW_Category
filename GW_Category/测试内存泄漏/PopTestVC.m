@@ -8,6 +8,7 @@
 
 #import "PopTestVC.h"
 #import "Pop2ViewController.h"
+#import "UIViewController+GWViewController.h"
 //static UIView *aaa = nil;
 @interface PopTestVC ()
 
@@ -46,9 +47,9 @@
 - (void)btnAction{
     Pop2ViewController *pop2 = [Pop2ViewController new];
 
-//    UINavigationController *popNav2 = [[UINavigationController alloc] initWithRootViewController:pop2];
-//    [self presentViewController:pop2 animated:YES completion:nil];
-    [self.navigationController pushViewController:pop2 animated:YES];
+    UINavigationController *popNav2 = [[UINavigationController alloc] initWithRootViewController:pop2];
+    [self presentViewController:popNav2 animated:YES completion:nil];
+//    [self.navigationController pushViewController:pop2 animated:YES];
 }
 
 - (void)btn2Action{

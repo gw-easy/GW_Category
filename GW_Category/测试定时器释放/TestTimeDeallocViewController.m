@@ -25,9 +25,9 @@
 - (void)btnAction{
     TwoTImeViewController *popVC = [TwoTImeViewController new];
     popVC.index = self.index+1;
-    UINavigationController *popNav = [[UINavigationController alloc] initWithRootViewController:popVC];
-    [self presentViewController:popNav animated:YES completion:nil];
-//    [self.navigationController pushViewController:popVC animated:YES];
+//    UINavigationController *popNav = [[UINavigationController alloc] initWithRootViewController:popVC];
+//    [self presentViewController:popNav animated:YES completion:nil];
+    [self.navigationController pushViewController:popVC animated:YES];
 }
 
 - (void)btn2Action{

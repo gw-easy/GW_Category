@@ -9,7 +9,6 @@
 #import "TwoTImeViewController.h"
 #import "ThreeTimeViewController.h"
 #import "UIViewController+GWViewController.h"
-
 @interface TwoTImeViewController ()
 @property (strong ,nonatomic) NSTimer *oneTime;
 @end
@@ -26,9 +25,9 @@
 - (void)btnAction{
     ThreeTimeViewController *popVC = [ThreeTimeViewController new];
     popVC.index = self.index+1;
-    UINavigationController *popNav = [[UINavigationController alloc] initWithRootViewController:popVC];
-    [self presentViewController:popNav animated:YES completion:nil];
-//    [self.navigationController pushViewController:popVC animated:YES];
+//    UINavigationController *popNav = [[UINavigationController alloc] initWithRootViewController:popVC];
+//    [self presentViewController:popNav animated:YES completion:nil];
+    [self.navigationController pushViewController:popVC animated:YES];
 }
 
 - (void)btn2Action{

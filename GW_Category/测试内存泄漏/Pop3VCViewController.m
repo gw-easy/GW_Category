@@ -42,18 +42,18 @@ static UIView *aaa = nil;
 }
 
 - (void)btnAction{
-//    Pop3VCViewController *pop3 = [Pop3VCViewController new];
-//
-////        UINavigationController *popNav2 = [[UINavigationController alloc] initWithRootViewController:pop2];
-//    [self presentViewController:pop3 animated:YES completion:nil];
+    Pop3VCViewController *pop3 = [Pop3VCViewController new];
+
+    UINavigationController *popNav3 = [[UINavigationController alloc] initWithRootViewController:pop3];
+    [self presentViewController:popNav3 animated:YES completion:nil];
 ////        [self.navigationController pushViewController:pop2 animated:YES];
 }
 
 - (void)btn2Action{
 //    [self dismissViewControllerAnimated:YES completion:nil];
 //    [self.navigationController popViewControllerAnimated:YES];
-    [self.navigationController popToRootViewControllerAnimated:YES];
-//    [self gw_dismissToRootViewControllerAnimated:YES];
+//    [self.navigationController popToRootViewControllerAnimated:YES];
+    [self gw_dismissToRootViewControllerAnimated:YES];
 }
 
 

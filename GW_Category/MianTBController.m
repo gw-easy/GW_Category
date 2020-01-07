@@ -70,6 +70,9 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     NSDictionary *dict = _dataArr[indexPath.section][indexPath.row];
     Class vcClass = NSClassFromString(dict[@"class"]);
+    if (!vcClass) {
+        return;
+    }
     UIViewController *vc = [vcClass new];
     vc.title = dict[@"class"];
     [self.navigationController pushViewController:vc animated:YES];
