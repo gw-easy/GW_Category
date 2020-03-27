@@ -43,7 +43,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param font 字体
 /// @param textColor 字体颜色
 /// @param underLine 下划线
-- (NSMutableAttributedString *)gw_stringNeedReplaceString:(NSString *)needReplaceString Font:(nullable UIFont *)font textColor:(nullable UIColor *)textColor underLine:(NSUnderlineStyle)underLine;
+- (NSMutableAttributedString *)gw_stringNeedReplaceString:(NSString *)needReplaceString Font:(nullable UIFont *)font textColor:(nullable UIColor *)textColor;
 
 
 /// 匹配字符，给字符添加属性
