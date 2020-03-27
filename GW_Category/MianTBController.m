@@ -28,7 +28,7 @@
         NSArray *firstArr = @[
             [self createVCDateClassName:@"TestMemoryLeakViewController" desStr:@"测试内存泄漏"],
             [self createVCDateClassName:@"TestTimeDeallocViewController" desStr:@"测试定时器释放"],
-             
+            [self createVCDateClassName:@"TestCategoryViewController" desStr:@"测试category"],
         
         ];
 //        TestTimeDeallocViewController

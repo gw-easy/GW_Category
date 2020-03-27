@@ -37,6 +37,25 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param key key
 - (NSString *)gw_stringAppentUrlForValue:(NSString *)value key:(NSString *)key;
 
+#pragma mark - 替换成属性字符串 - 局部文本替换
+/// 匹配字符，给字符添加属性
+/// @param needReplaceString 需要匹配的字符串
+/// @param font 字体
+/// @param textColor 字体颜色
+/// @param underLine 下划线
+- (NSMutableAttributedString *)gw_stringNeedReplaceString:(NSString *)needReplaceString Font:(nullable UIFont *)font textColor:(nullable UIColor *)textColor underLine:(NSUnderlineStyle)underLine;
+
+
+/// 匹配字符，给字符添加属性
+/// @param needReplaceString  需要匹配的字符串
+/// @param dict 属性字典
+- (NSMutableAttributedString *)gw_stringNeedReplaceString:(NSString *)needReplaceString dict:(nullable NSDictionary *)dict;
+
+/// 查找子字符串在父字符串中的所有位置
+/// @param needReplaceString 截取字符串
+/// @return 返回位置数组 NSValue（NSRange）
+- (NSMutableArray *)gw_calculateNeedReplaceStringStr:(NSString *)needReplaceString;
+
 #pragma mark - 转码
 
 /// 转码 - urf8 - url

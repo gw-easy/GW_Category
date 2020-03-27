@@ -39,7 +39,7 @@
 
 - (void)gw_dismissViewControllerAnimated:(BOOL)flag completion:(void (^)(void))completion{
     UIViewController *dismissedViewController = self;
-    if (!dismissedViewController.presentedViewController) {
+    if (!self.presentedViewController && self.presentingViewController) {
 //        self.navigationController
         dismissedViewController = [self dismissNavVC:self needDealloc:NO];
         if (dismissedViewController.presentingViewController) {

@@ -104,6 +104,25 @@
     }
 }
 
+- (BOOL)GW_ExistNavSubVC:(Class)existC{
+    if (self.viewControllers) {
+        for (UIViewController *troll in self.viewControllers) {
+            if ([troll isKindOfClass:existC]) {
+                return YES;
+            }
+        }
+    }
+    return NO;
+}
 
-
+- (void)GW_PopToVC:(Class)popC{
+    if (self.viewControllers) {
+        for (UIViewController *troll in self.viewControllers) {
+            if ([troll isKindOfClass:popC]) {
+                [self popToViewController:troll animated:YES];
+                break;
+            }
+        }
+    }
+}
 @end

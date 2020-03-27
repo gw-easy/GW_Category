@@ -61,6 +61,59 @@
     return string.copy;
 }
 
+#pragma mark - 替换成属性字符串
+- (NSMutableAttributedString *)gw_stringNeedReplaceString:(NSString *)needReplaceString Font:(UIFont *)font textColor:(UIColor *)textColor{
+    NSArray *interceptArr = [self gw_calculateNeedReplaceStringStr:needReplaceString];
+    NSMutableAttributedString *muAttrStr = [[NSMutableAttributedString alloc] initWithString:self];
+    for (NSValue *value in interceptArr) {
+        NSRange range = [value rangeValue];
+        if (font) {
+            [muAttrStr addAttribute:NSFontAttributeName value:font range:range];
+        }
+        if (textColor) {
+            [muAttrStr addAttribute:NSForegroundColorAttributeName value:textColor range:range];
+        }
+    }
+    return muAttrStr;
+}
+
+- (NSMutableAttributedString *)gw_stringNeedReplaceString:(NSString *)needReplaceString dict:(NSDictionary *)dict{
+    NSMutableAttributedString *muAttrStr = [[NSMutableAttributedString alloc] initWithString:self];
+    if (!dict) {
+        return muAttrStr;
+    }
+    NSArray *interceptArr = [self gw_calculateNeedReplaceStringStr:needReplaceString];
+    for (NSValue *value in interceptArr) {
+        [muAttrStr addAttributes:dict range:[value rangeValue]];
+    }
+    return muAttrStr;
+}
+
+- (NSMutableArray *)gw_calculateNeedReplaceStringStr:(NSString *)needReplaceString{
+    NSMutableArray *locationArr = [NSMutableArray new];
+    NSRange range = [self rangeOfString:needReplaceString];
+    if (range.location == NSNotFound){
+        return locationArr;
+    }
+    int location = 0;
+    //声明一个临时字符串,记录截取之后的字符串
+    NSString *subStr = [self copy];
+    while (range.location != NSNotFound) {
+        if (location == 0) {
+            location += range.location;
+        } else {
+            location += range.location + range.length;
+        }
+        [locationArr addObject:[NSValue valueWithRange:NSMakeRange(location, range.length)]];
+        //每次记录之后,把找到的字串截取掉
+        subStr = [subStr substringFromIndex:range.location + range.length];
+//        NSLog(@"subStr %@",subStr);
+        range = [subStr rangeOfString:needReplaceString];
+//        NSLog(@"rang %@",NSStringFromRange(range));
+    }
+    return locationArr;
+}
+
 #pragma mark - 转码
 - (NSString *)gw_stringEscapesUsingEncodingUTF8{
     if ([self gw_isEmptyString]) {
