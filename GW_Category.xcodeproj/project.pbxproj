@@ -205,8 +205,8 @@
 		28BD822D23C2DA5B0057EAED /* GW_ModelKit */ = {
 			isa = PBXGroup;
 			children = (
-				28BD822E23C2DA5B0057EAED /* NSObject+GW_Model.m */,
 				28BD822F23C2DA5B0057EAED /* NSObject+GW_Model.h */,
+				28BD822E23C2DA5B0057EAED /* NSObject+GW_Model.m */,
 			);
 			path = GW_ModelKit;
 			sourceTree = "<group>";
