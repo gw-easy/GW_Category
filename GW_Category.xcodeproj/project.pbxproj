@@ -42,6 +42,7 @@
 		28BD828523C2DA800057EAED /* ThreeTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BD828223C2DA800057EAED /* ThreeTimeViewController.m */; };
 		28D3370923BDFFCA00B17546 /* TestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D3370823BDFFCA00B17546 /* TestView.m */; };
 		C418C486242DFEA10085B85F /* TestCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C418C485242DFEA10085B85F /* TestCategoryViewController.m */; };
+		C4FD2821243A333600D8656C /* TestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C4FD2820243A333600D8656C /* TestModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -114,6 +115,8 @@
 		28D3370823BDFFCA00B17546 /* TestView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestView.m; sourceTree = "<group>"; };
 		C418C484242DFEA10085B85F /* TestCategoryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestCategoryViewController.h; sourceTree = "<group>"; };
 		C418C485242DFEA10085B85F /* TestCategoryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestCategoryViewController.m; sourceTree = "<group>"; };
+		C4FD281F243A333600D8656C /* TestModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestModel.h; sourceTree = "<group>"; };
+		C4FD2820243A333600D8656C /* TestModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -366,6 +369,8 @@
 			children = (
 				C418C484242DFEA10085B85F /* TestCategoryViewController.h */,
 				C418C485242DFEA10085B85F /* TestCategoryViewController.m */,
+				C4FD281F243A333600D8656C /* TestModel.h */,
+				C4FD2820243A333600D8656C /* TestModel.m */,
 			);
 			path = "测试category";
 			sourceTree = "<group>";
@@ -464,6 +469,7 @@
 				28BD827823C2DA5B0057EAED /* NSObject+GWObject.m in Sources */,
 				28BD826D23C2DA5B0057EAED /* UIPageViewController+GWPageViewController.m in Sources */,
 				28BD826E23C2DA5B0057EAED /* UIViewController+GWViewController.m in Sources */,
+				C4FD2821243A333600D8656C /* TestModel.m in Sources */,
 				28BD827223C2DA5B0057EAED /* NSString+GWString.m in Sources */,
 				28466D4823B9ECA500407C3F /* AppDelegate.m in Sources */,
 				28466D5923B9ECA600407C3F /* main.m in Sources */,

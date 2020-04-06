@@ -30,16 +30,17 @@ return self; \
 // 可自定义类<替换实际属性名,实际类>
 + (NSDictionary <NSString *, Class> *)GW_ModelDelegateReplacePropertyMapper;
 // 可替换属性名值<替换实际属性名,需要赋值的属性名>
-+ (NSDictionary <NSString *, NSString *> *)GW_ModelDelegateReplacePropertyValue;
++ (NSDictionary <NSString *, NSString *> *)GW_ModelDelegateReplacePropertyName;
 //每一个json->model转换完成后的回调 obj返回的实例对象，可对自定义属性赋值
 + (void)GW_JsonToModelFinish:(NSObject *)Obj;
 @end
 
 @interface NSObject (GW_Model)<GW_Model_ChangeDelegate>
 
-#pragma mark json->model 使用注意事项，需要保证属性名称和json里的参数名,参数名类型（array/dictionary/model）一致，否则会解析成null，支持model多继承，对于array／dictionary里包含的model类型，需要将model类名和参数名保持一致，如果要自定义参数名，请用带changeDic参数的方法
-
-//默认支持的array／dictionary中model类名，1.参数名=类名（首字母不区分大小写） 2.类名=参数名+Model 3.其他格式的类名（只针对array／dictionary），需要在changeDic中，添加@{"参数名":"类名",}
+#pragma mark json->model - 使用注意事项
+//1、需要保证属性名称和json里的参数名一致，或者实现（GW_ModelDelegateReplacePropertyValue 代理）。
+//2、支持model传代继承，对于array／dictionary里包含的model类型，需要将model类名和参数名保持一致，或者实现（GW_ModelDelegateReplacePropertyMapper 代理），或者请用带changeDic参数的方法 changeDic大于代理等级。
+//3、对于类中出现同名属性大小写的情况，此控件只会对大写属性赋值。
 
 /**
  无路径转换，一个命令转换任何格式的json
@@ -64,7 +65,7 @@ return self; \
 
  @param json json
  @param keyPath 路径需要用“／”区分
- @param changeDic model类名称和参数名不一样的，主要针对array/dictionary里泛型获取不到，无法知道array／dictionary里面装的类的名称，如果改变类名出现相同key，请用代理，代理的优先级大于此字典
+ @param changeDic 优先级大于代理
  @return model
  */
 + (id)GW_JsonToModel:(id)json keyPath:(NSString *)keyPath changeDic:(NSDictionary<NSString *,Class> *)changeDic;

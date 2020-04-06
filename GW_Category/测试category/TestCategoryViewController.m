@@ -8,6 +8,8 @@
 
 #import "TestCategoryViewController.h"
 #import "NSString+GWString.h"
+#import "NSObject+GW_Model.h"
+#import "TestModel.h"
 @interface TestCategoryViewController ()
 
 @end
@@ -17,7 +19,23 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    [self testReplaceStr];
+//    [self testReplaceStr];
+    [self testModel];
+}
+
+- (void)testModel{
+    NSMutableDictionary *muDict = [NSMutableDictionary dictionary];
+//    [muDict setValue:@"222" forKey:@"first"];
+    [muDict setValue:@"666" forKey:@"First"];
+    [muDict setValue:@"222" forKey:@"first"];
+//    [muDict setValue:@{@"First":@"333"} forKey:@"testDic"];
+    [muDict setValue:@{@"First":@"111"} forKey:@"TestDic"];
+    [muDict setValue:@{@"First":@"333"} forKey:@"testDic"];
+    TestModel *model = [TestModel GW_JsonToModel:[muDict GW_ModelToJson:muDict]];
+
+//    NSLog(@"%@---%@-----%@",model.First,model.first,model.testDic.First);
+        NSLog(@"%@---%@",model.First,model.TestDic.First);
+
 }
 
 - (void)testReplaceStr{

@@ -43,8 +43,9 @@ typedef NS_OPTIONS(NSUInteger, GW_TYPE) {
 @interface GW_ModelPropertyType : NSObject
 @property (assign, nonatomic) Class class;
 @property (assign, nonatomic) GW_TYPE type;
-@property (assign, nonatomic) SEL setter;
-@property (assign, nonatomic) SEL getter;
+@property (copy, nonatomic) NSString *name;
+@property (nonatomic) SEL setter;
+@property (nonatomic) SEL getter;
 @end
 @implementation GW_ModelPropertyType
 
@@ -209,7 +210,7 @@ typedef NS_OPTIONS(NSUInteger, GW_TYPE) {
         GW_ModelPropertyType *propertyType = [GW_ModelPropertyType new];
         const char *attributes = property_getAttributes(property);
         propertyType.type = [self.class parserTypeWithAttr:[NSString stringWithUTF8String:attributes]];
-        propertyType.setter = [self.class getSELName_FirstUP:propertyName type:_GW_SEL_FirstUP];
+        propertyType.setter = [self.class getSELName_FirstUP:propertyName];
         
         
         if ([classObject respondsToSelector:propertyType.setter]) {
@@ -496,10 +497,9 @@ typedef NS_OPTIONS(NSUInteger, GW_TYPE) {
         }else{
             modelObject = [class new];
             [objDic enumerateKeysAndObjectsUsingBlock:^(NSString *  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
-                SEL setter = nil;
-                GW_ModelPropertyType *propertyType = nil;
-                if ([class respondsToSelector:@selector(GW_ModelDelegateReplacePropertyValue)]) {
-                    NSDictionary *replacePropertyValueDict = [class GW_ModelDelegateReplacePropertyValue];
+                
+                if ([class respondsToSelector:@selector(GW_ModelDelegateReplacePropertyName)]) {
+                    NSDictionary *replacePropertyValueDict = [class GW_ModelDelegateReplacePropertyName];
                     NSString * replaceName = replacePropertyValueDict[key];
                     if (replaceName) {
                         key = replaceName;
@@ -508,30 +508,20 @@ typedef NS_OPTIONS(NSUInteger, GW_TYPE) {
                 
 //                NSLog(@"key = %@",key);
 //                获取model的类型，是否包含其他mdoel／array／dictionary
-                propertyType = [self GW_ModelExistProperty:key withObject:modelObject valueClass:[obj class]];
+                GW_ModelPropertyType *propertyType = [self GW_ModelExistProperty:key withObject:modelObject valueClass:[obj class]];
                 
                 if(!propertyType){
                     return;
                 }
 //                NSLog(@"class ==  %@",propertyType.class);
-                
-                if (key.length > 1) {
-                    setter = [self getSELName_FirstUP:key type:_GW_SEL_FirstUP];
-                }else {
-                    setter = [self getSELName_FirstUP:key type:_GW_SEL_AllUP];
-                }
+                SEL setter = [self getSELName_FirstUP:key];
                 
                 if (![modelObject respondsToSelector:setter]) {
-                    key = [self GW_HasExistProperty:key withObject:modelObject];
-                    if (!key) {
+                    key = propertyType.name;
+                    if (!key || !key.length) {
                         return;
                     }
-                    
-                    if (key.length > 1) {
-                        setter = [self getSELName_FirstUP:key type:_GW_SEL_FirstUP];
-                    }else {
-                        setter = [self getSELName_FirstUP:key type:_GW_SEL_AllUP];
-                    }
+                    setter = [self getSELName_FirstUP:key];
                 }
                 
                 propertyType.setter = setter;
@@ -539,9 +529,10 @@ typedef NS_OPTIONS(NSUInteger, GW_TYPE) {
                 switch (propertyType.type) {
                     case _Array:
                         sub_Class = [self GW_HasExistClass:key changeDic:changeDic sub_Class:sub_Class class:class];
-
                         if (sub_Class) {
                             ((void (*)(id, SEL, NSArray *))(void *) objc_msgSend)((id)modelObject, propertyType.setter, [self GW_ModelDataEngine:obj class:sub_Class changeDic:changeDic]);
+                        }else{
+                            ((void (*)(id, SEL, NSArray *))(void *) objc_msgSend)((id)modelObject, propertyType.setter, obj);
                         }
                         break;
                     case _Dictionary:
@@ -554,10 +545,11 @@ typedef NS_OPTIONS(NSUInteger, GW_TYPE) {
                                 [subDic setValue:[self GW_ModelDataEngine:data class:sub_Class changeDic:changeDic] forKey:key];
                             }];
                             ((void (*)(id, SEL, NSDictionary *))(void *) objc_msgSend)((id)modelObject, propertyType.setter, subDic);
+                        }else{
+                            ((void (*)(id, SEL, NSDictionary *))(void *) objc_msgSend)((id)modelObject, propertyType.setter, obj);
                         }
                         break;
                     case _String:
-//                        NSLog(@"string -- obj = %@ -- %@ -- %@",obj,modelObject,NSStringFromSelector(propertyType.setter));
                         ((void (*)(id, SEL, NSString *))(void *) objc_msgSend)((id)modelObject, propertyType.setter, obj);
                         
                         break;
@@ -636,23 +628,17 @@ typedef NS_OPTIONS(NSUInteger, GW_TYPE) {
 }
 
 + (id)GW_HasExistClass:(NSString *)key changeDic:(NSDictionary *)changeDic sub_Class:(Class)key_sub_Class class:(Class)class{
-    __block Class s_class = key_sub_Class;
     
-    if (!s_class && class) {
-        if ([class respondsToSelector:@selector(GW_ModelDelegateReplacePropertyMapper)]) {
-            NSDictionary *classDic = [class GW_ModelDelegateReplacePropertyMapper];
-            s_class = [self checkClass:classDic key:key];
-        }
+    if (!key_sub_Class && changeDic) {
+        key_sub_Class = [self checkClass:changeDic key:key];
     }
     
-    if (!s_class) {
-        s_class = [self checkClass:changeDic key:key];
+    if (!key_sub_Class && class && [class respondsToSelector:@selector(GW_ModelDelegateReplacePropertyMapper)]) {
+        NSDictionary *classDic = [class GW_ModelDelegateReplacePropertyMapper];
+        key_sub_Class = [self checkClass:classDic key:key];
     }
-    
-    if (!s_class) {
-        return nil;
-    }
-    return s_class;
+
+    return key_sub_Class;
 }
 
 + (Class)checkClass:(NSDictionary *)dict key:(NSString *)key{
@@ -668,46 +654,49 @@ typedef NS_OPTIONS(NSUInteger, GW_TYPE) {
     return s_class;
 }
 
-+ (NSString *)GW_HasExistProperty:(NSString *)property withObject:(__kindof NSObject *)object{
-    objc_property_t property_t = class_getProperty(object.class, [property UTF8String]);
-    if (property_t) {
-        const char *name = property_getName(property_t);
-        NSString *nameStr = [NSString stringWithUTF8String:name];
-        return nameStr;
-    }else{
-        unsigned int count = 0;
-        objc_property_t *propertyes = class_copyPropertyList(object.class, &count);
-        for (unsigned int i = 0; i<count; i++) {
-            objc_property_t property_t = propertyes[i];
-            const char *name = property_getName(property_t);
-            NSString *nameStr = [NSString stringWithUTF8String:name];
-            if ([nameStr.lowercaseString isEqualToString:property.lowercaseString]) {
-                free(propertyes);
-                return nameStr;
-            }
-        }
-        free(propertyes);
-        Class superClass = class_getSuperclass(object.class);
-        if (superClass && superClass != [NSObject class]) {
-            NSString *name = [self GW_HasExistProperty:property withObject:[superClass new]];
-            if (name && name.length>0) {
-                return name;
-            }
-        }
-        return nil;
-    }
-    
-}
+//+ (NSString *)GW_HasExistProperty:(NSString *)property withObject:(__kindof NSObject *)object{
+//    objc_property_t property_t = class_getProperty(object.class, [property UTF8String]);
+//    if (property_t) {
+//        const char *name = property_getName(property_t);
+//        NSString *nameStr = [NSString stringWithUTF8String:name];
+//        return nameStr;
+//    }else{
+//        unsigned int count = 0;
+//        objc_property_t *propertyes = class_copyPropertyList(object.class, &count);
+//        for (unsigned int i = 0; i<count; i++) {
+//            objc_property_t property_t = propertyes[i];
+//            const char *name = property_getName(property_t);
+//            NSString *nameStr = [NSString stringWithUTF8String:name];
+//            if ([nameStr isEqualToString:property]) {
+//                free(propertyes);
+//                return nameStr;
+//            }
+//        }
+//        free(propertyes);
+//        Class superClass = class_getSuperclass(object.class);
+//        if (superClass && superClass != [NSObject class]) {
+//            NSString *name = [self GW_HasExistProperty:property withObject:[superClass new]];
+//            if (name && name.length>0) {
+//                return name;
+//            }
+//        }
+//        return nil;
+//    }
+//
+//}
 
 + (GW_ModelPropertyType *)GW_ModelExistProperty:(NSString *)property withObject:(__kindof NSObject *)object valueClass:(Class)valueClass {
     
     GW_ModelPropertyType *propertyType = nil;
     objc_property_t property_t = class_getProperty(object.class, [property UTF8String]);
     if (property_t) {
+        const char *name = property_getName(property_t);
+        NSString *nameStr = [NSString stringWithUTF8String:name];
         const char *attributes = property_getAttributes(property_t);
         NSString *attUT8 = [NSString stringWithUTF8String:attributes];
         NSArray *buteArr = [attUT8 componentsSeparatedByString:@"\""];
         propertyType = [[GW_ModelPropertyType alloc] init];
+        propertyType.name = nameStr;
         if (buteArr.count == 1) {
             propertyType.type = valueClass == [NSNull class]?_Null:[self parserTypeWithAttr:buteArr[0]];
         }else{
@@ -721,12 +710,13 @@ typedef NS_OPTIONS(NSUInteger, GW_TYPE) {
             objc_property_t property_t = propertyes[i];
             const char *name = property_getName(property_t);
             NSString *nameStr = [NSString stringWithUTF8String:name];
-            if ([nameStr.lowercaseString isEqualToString:property.lowercaseString]) {
+            if ([nameStr isEqualToString:property]) {
                 const char *attributes = property_getAttributes(property_t);
                 NSString *buteStr = [NSString stringWithUTF8String:attributes];
                 NSArray *buteArr = [buteStr componentsSeparatedByString:@"\""];
                 free(propertyes);
                 propertyType = [[GW_ModelPropertyType alloc] init];
+                propertyType.name = nameStr;
                 if (buteArr.count == 1) {
                     propertyType.type = valueClass == [NSNull class]?_Null:[self parserTypeWithAttr:buteArr[0]];
                 }else{
@@ -735,7 +725,6 @@ typedef NS_OPTIONS(NSUInteger, GW_TYPE) {
                 return propertyType;
             }
         }
-        
         free(propertyes);
         Class superClass = class_getSuperclass([object class]);
         if (superClass && superClass != [NSObject class]) {
@@ -749,25 +738,9 @@ typedef NS_OPTIONS(NSUInteger, GW_TYPE) {
 }
 
 
-+ (SEL)getSELName_FirstUP:(NSString *)keyName type:(GW_Action)type{
-    NSString * first = [keyName substringToIndex:1];
-    NSString * other = [keyName substringFromIndex:1];
-    switch (type) {
-        case _GW_SEL_FirstUP:
-            return NSSelectorFromString([NSString stringWithFormat:@"set%@%@:",first.uppercaseString, other]);
-            break;
-        case _GW_SEL_AllUP:
-            return NSSelectorFromString([NSString stringWithFormat:@"set%@:",keyName.uppercaseString]);
-            break;
-        default:
-            break;
-    }
-    return nil;
++ (SEL)getSELName_FirstUP:(NSString *)keyName{
+    GW_Action type = keyName.length>1?_GW_SEL_FirstUP:_GW_SEL_AllUP;
+    return NSSelectorFromString(type==_GW_SEL_FirstUP?[NSString stringWithFormat:@"set%@%@:",[keyName substringToIndex:1].uppercaseString, [keyName substringFromIndex:1]]:[NSString stringWithFormat:@"set%@:",keyName.uppercaseString]);
 }
-
-
-
-
-
 
 @end
