@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface TestModel : NSObject
 //@property (strong, nonatomic) TestModel *testDic;
 @property (strong, nonatomic) TestModel *TestDic;
-//@property (copy, nonatomic) NSString *first;
+@property (copy, nonatomic) NSString *first;
 @property (copy, nonatomic) NSString *First;
 
 @end

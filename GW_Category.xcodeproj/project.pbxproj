@@ -18,7 +18,6 @@
 		28594B2C23BF0AC90046C955 /* Pop3VCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28594B2B23BF0AC90046C955 /* Pop3VCViewController.m */; };
 		28594B2F23BF3A4D0046C955 /* MianTBController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28594B2E23BF3A4D0046C955 /* MianTBController.m */; };
 		28BD826723C2DA5B0057EAED /* NSObject+GW_Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BD822E23C2DA5B0057EAED /* NSObject+GW_Model.m */; };
-		28BD826823C2DA5B0057EAED /* UIView+GW_AutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BD823123C2DA5B0057EAED /* UIView+GW_AutoLayout.m */; };
 		28BD826923C2DA5B0057EAED /* UIControl+GWControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BD823523C2DA5B0057EAED /* UIControl+GWControl.m */; };
 		28BD826A23C2DA5B0057EAED /* UIImageView+GWImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BD823923C2DA5B0057EAED /* UIImageView+GWImageView.m */; };
 		28BD826B23C2DA5B0057EAED /* UINavigationController+GWNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BD823D23C2DA5B0057EAED /* UINavigationController+GWNavigationController.m */; };
@@ -41,6 +40,10 @@
 		28BD828423C2DA800057EAED /* TwoTImeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BD828023C2DA800057EAED /* TwoTImeViewController.m */; };
 		28BD828523C2DA800057EAED /* ThreeTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BD828223C2DA800057EAED /* ThreeTimeViewController.m */; };
 		28D3370923BDFFCA00B17546 /* TestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D3370823BDFFCA00B17546 /* TestView.m */; };
+		C40D125A250630E400E30EFA /* UIView+GW_AutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C40D1252250630E300E30EFA /* UIView+GW_AutoLayout.m */; };
+		C40D125B250630E400E30EFA /* UITableViewCell+GW_AutoHeightForCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C40D1253250630E300E30EFA /* UITableViewCell+GW_AutoHeightForCell.m */; };
+		C40D125C250630E400E30EFA /* UIView+GWTools.m in Sources */ = {isa = PBXBuildFile; fileRef = C40D1256250630E300E30EFA /* UIView+GWTools.m */; };
+		C40D125D250630E400E30EFA /* UIView+GWFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = C40D1258250630E400E30EFA /* UIView+GWFrame.m */; };
 		C418C486242DFEA10085B85F /* TestCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C418C485242DFEA10085B85F /* TestCategoryViewController.m */; };
 		C4FD2821243A333600D8656C /* TestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C4FD2820243A333600D8656C /* TestModel.m */; };
 /* End PBXBuildFile section */
@@ -66,9 +69,6 @@
 		28594B2E23BF3A4D0046C955 /* MianTBController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MianTBController.m; sourceTree = "<group>"; };
 		28BD822E23C2DA5B0057EAED /* NSObject+GW_Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+GW_Model.m"; sourceTree = "<group>"; };
 		28BD822F23C2DA5B0057EAED /* NSObject+GW_Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+GW_Model.h"; sourceTree = "<group>"; };
-		28BD823123C2DA5B0057EAED /* UIView+GW_AutoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+GW_AutoLayout.m"; sourceTree = "<group>"; };
-		28BD823223C2DA5B0057EAED /* GW_AutoLayoutUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW_AutoLayoutUtilities.h; sourceTree = "<group>"; };
-		28BD823323C2DA5B0057EAED /* UIView+GW_AutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+GW_AutoLayout.h"; sourceTree = "<group>"; };
 		28BD823523C2DA5B0057EAED /* UIControl+GWControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+GWControl.m"; sourceTree = "<group>"; };
 		28BD823623C2DA5B0057EAED /* UIControl+GWControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+GWControl.h"; sourceTree = "<group>"; };
 		28BD823823C2DA5B0057EAED /* UIImageView+GWImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+GWImageView.h"; sourceTree = "<group>"; };
@@ -113,6 +113,16 @@
 		28BD828223C2DA800057EAED /* ThreeTimeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThreeTimeViewController.m; sourceTree = "<group>"; };
 		28D3370723BDFFCA00B17546 /* TestView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestView.h; sourceTree = "<group>"; };
 		28D3370823BDFFCA00B17546 /* TestView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestView.m; sourceTree = "<group>"; };
+		C40D1250250630E300E30EFA /* GW_AutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW_AutoLayout.h; sourceTree = "<group>"; };
+		C40D1251250630E300E30EFA /* UITableViewCell+GW_AutoHeightForCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+GW_AutoHeightForCell.h"; sourceTree = "<group>"; };
+		C40D1252250630E300E30EFA /* UIView+GW_AutoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+GW_AutoLayout.m"; sourceTree = "<group>"; };
+		C40D1253250630E300E30EFA /* UITableViewCell+GW_AutoHeightForCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+GW_AutoHeightForCell.m"; sourceTree = "<group>"; };
+		C40D1254250630E300E30EFA /* GW_AutoLayoutUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW_AutoLayoutUtilities.h; sourceTree = "<group>"; };
+		C40D1255250630E300E30EFA /* UIView+GW_AutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+GW_AutoLayout.h"; sourceTree = "<group>"; };
+		C40D1256250630E300E30EFA /* UIView+GWTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+GWTools.m"; sourceTree = "<group>"; };
+		C40D1257250630E300E30EFA /* UIView+GWFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+GWFrame.h"; sourceTree = "<group>"; };
+		C40D1258250630E400E30EFA /* UIView+GWFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+GWFrame.m"; sourceTree = "<group>"; };
+		C40D1259250630E400E30EFA /* UIView+GWTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+GWTools.h"; sourceTree = "<group>"; };
 		C418C484242DFEA10085B85F /* TestCategoryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestCategoryViewController.h; sourceTree = "<group>"; };
 		C418C485242DFEA10085B85F /* TestCategoryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestCategoryViewController.m; sourceTree = "<group>"; };
 		C4FD281F243A333600D8656C /* TestModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestModel.h; sourceTree = "<group>"; };
@@ -217,9 +227,11 @@
 		28BD823023C2DA5B0057EAED /* GW_View */ = {
 			isa = PBXGroup;
 			children = (
-				28BD823123C2DA5B0057EAED /* UIView+GW_AutoLayout.m */,
-				28BD823223C2DA5B0057EAED /* GW_AutoLayoutUtilities.h */,
-				28BD823323C2DA5B0057EAED /* UIView+GW_AutoLayout.h */,
+				C40D124F250630E300E30EFA /* GW_AutoLayoutKit */,
+				C40D1257250630E300E30EFA /* UIView+GWFrame.h */,
+				C40D1258250630E400E30EFA /* UIView+GWFrame.m */,
+				C40D1259250630E400E30EFA /* UIView+GWTools.h */,
+				C40D1256250630E300E30EFA /* UIView+GWTools.m */,
 			);
 			path = GW_View;
 			sourceTree = "<group>";
@@ -364,6 +376,19 @@
 			path = "测试定时器释放";
 			sourceTree = "<group>";
 		};
+		C40D124F250630E300E30EFA /* GW_AutoLayoutKit */ = {
+			isa = PBXGroup;
+			children = (
+				C40D1250250630E300E30EFA /* GW_AutoLayout.h */,
+				C40D1254250630E300E30EFA /* GW_AutoLayoutUtilities.h */,
+				C40D1251250630E300E30EFA /* UITableViewCell+GW_AutoHeightForCell.h */,
+				C40D1253250630E300E30EFA /* UITableViewCell+GW_AutoHeightForCell.m */,
+				C40D1255250630E300E30EFA /* UIView+GW_AutoLayout.h */,
+				C40D1252250630E300E30EFA /* UIView+GW_AutoLayout.m */,
+			);
+			path = GW_AutoLayoutKit;
+			sourceTree = "<group>";
+		};
 		C418C483242DFE7D0085B85F /* 测试category */ = {
 			isa = PBXGroup;
 			children = (
@@ -450,14 +475,15 @@
 				28BD828323C2DA800057EAED /* TestTimeDeallocViewController.m in Sources */,
 				28BD827A23C2DA5B0057EAED /* NSMutableDictionary+GWMutableDictionary.m in Sources */,
 				28466D9F23B9F25F00407C3F /* PopTestVC.m in Sources */,
-				28BD826823C2DA5B0057EAED /* UIView+GW_AutoLayout.m in Sources */,
 				28BD827B23C2DA5B0057EAED /* NSDictionary+GWDictionary.m in Sources */,
 				28BD826923C2DA5B0057EAED /* UIControl+GWControl.m in Sources */,
 				28BD827023C2DA5B0057EAED /* UIImage+GWImage.m in Sources */,
 				28BD826A23C2DA5B0057EAED /* UIImageView+GWImageView.m in Sources */,
 				28466D4E23B9ECA500407C3F /* TestMemoryLeakViewController.m in Sources */,
 				28BD827523C2DA5B0057EAED /* NSMutableArray+GWMutableArray.m in Sources */,
+				C40D125C250630E400E30EFA /* UIView+GWTools.m in Sources */,
 				28BD826C23C2DA5B0057EAED /* UITabBarController+GWTabBarController.m in Sources */,
+				C40D125A250630E400E30EFA /* UIView+GW_AutoLayout.m in Sources */,
 				C418C486242DFEA10085B85F /* TestCategoryViewController.m in Sources */,
 				28466DA223B9FF7700407C3F /* Pop2ViewController.m in Sources */,
 				28BD826B23C2DA5B0057EAED /* UINavigationController+GWNavigationController.m in Sources */,
@@ -470,11 +496,13 @@
 				28BD826D23C2DA5B0057EAED /* UIPageViewController+GWPageViewController.m in Sources */,
 				28BD826E23C2DA5B0057EAED /* UIViewController+GWViewController.m in Sources */,
 				C4FD2821243A333600D8656C /* TestModel.m in Sources */,
+				C40D125B250630E400E30EFA /* UITableViewCell+GW_AutoHeightForCell.m in Sources */,
 				28BD827223C2DA5B0057EAED /* NSString+GWString.m in Sources */,
 				28466D4823B9ECA500407C3F /* AppDelegate.m in Sources */,
 				28466D5923B9ECA600407C3F /* main.m in Sources */,
 				28BD828523C2DA800057EAED /* ThreeTimeViewController.m in Sources */,
 				28BD827923C2DA5B0057EAED /* UIButton+GWButton.m in Sources */,
+				C40D125D250630E400E30EFA /* UIView+GWFrame.m in Sources */,
 				28594B2C23BF0AC90046C955 /* Pop3VCViewController.m in Sources */,
 				28594B2F23BF3A4D0046C955 /* MianTBController.m in Sources */,
 				28BD827723C2DA5B0057EAED /* UITouch+GWTouch.m in Sources */,

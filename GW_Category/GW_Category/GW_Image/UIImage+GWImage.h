@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import <AVFoundation/AVFoundation.h>
 NS_ASSUME_NONNULL_BEGIN
 
 @interface UIImage (GWImage)
@@ -65,7 +65,36 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param radius 圆角
 -(UIImage *)gw_imageForCornerRadius:(CGFloat)radius;
 
+#pragma mark - 视频帧imageBuffer转换成image
 
+/// sampleBuffer->image
+/// @param sampleBuffer sampleBuffer description
++ (UIImage *)gw_imageFromSampleBuffer:(CMSampleBufferRef)sampleBuffer;
+
+
+/// imageBuffer->image
+/// @param imageBuffer imageBuffer description
++ (UIImage *)gw_imageFromImageStream:(CVImageBufferRef)imageBuffer;
+
+
+/// image->CVPixelBufferRef (通过RGB模式转)
+/// @param image image description
++ (CVPixelBufferRef)gw_pixelBufferARGBFromUIImage:(UIImage *)image;
+
+
+/// image->CVPixelBufferRef (通过YUV模式转)
+/// @param image image description
++ (CVPixelBufferRef)gw_pixelBufferYUVFromUIImage:(UIImage *)image;
+
+#pragma mark - 旋转图片
+/// 旋转方向
+/// @param orientation orientation description
+-(UIImage *)gw_imageRotation:(UIImageOrientation)orientation;
+
+
+/// 旋转角度
+/// @param degrees 角度
+- (UIImage *)gw_imageRotatedOnDegrees:(CGFloat)degrees;
 
 @end
 
