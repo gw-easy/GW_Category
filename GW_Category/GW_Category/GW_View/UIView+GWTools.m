@@ -123,14 +123,30 @@
 }
 
 + (void)gw_applicationDidFinishLaunching{
-    CGFloat navHeight = [UINavigationController new].navigationBar.bounds.size.height>0?[UINavigationController new].navigationBar.bounds.size.height:44;
-    CGFloat statusHeight = [UIApplication sharedApplication].statusBarFrame.size.height>0?[UIApplication sharedApplication].statusBarFrame.size.height:(IS_HAS_SafeArea_GW ? 44 : 20);
-    CGFloat tabHeight = [UITabBarController new].tabBar.bounds.size.height>0?[UITabBarController new].tabBar.bounds.size.height:49;
+    BOOL hasSafeArea = NO;
+    CGFloat homeIndicatorHeight = 0;
+    CGFloat topSafeHeight = 0;
+    if (@available(iOS 11.0, *)) {
+        UIEdgeInsets edge = [UIApplication sharedApplication].windows[0].safeAreaInsets;
+        topSafeHeight = edge.top;
+        homeIndicatorHeight = edge.bottom;
+        hasSafeArea = edge.bottom > 0;
+    }
+    
+    CGFloat navHeight = [UINavigationController new].navigationBar.bounds.size.height;
+    CGFloat tabHeight = [UITabBarController new].tabBar.bounds.size.height;
+    CGFloat statusHeight = [UIApplication sharedApplication].statusBarFrame.size.height;
+    navHeight = navHeight>0?navHeight:44;
+    tabHeight = tabHeight>0?tabHeight:49;
+    statusHeight = statusHeight>0?statusHeight:(hasSafeArea ? topSafeHeight : 20);
     [[NSUserDefaults standardUserDefaults] setDouble:navHeight forKey:GW_NAV_BAR_HEIGHT];
     [[NSUserDefaults standardUserDefaults] setDouble:statusHeight forKey:GW_STATUS_HEIGHT];
     [[NSUserDefaults standardUserDefaults] setDouble:navHeight+statusHeight forKey:GW_NAV_HEIGHT];
     [[NSUserDefaults standardUserDefaults] setDouble:tabHeight forKey:GW_TAB_BAR_HEIGHT];
-    [[NSUserDefaults standardUserDefaults] setDouble:IS_HAS_SafeArea_GW?tabHeight + HomeIndicatorHeight_GW:tabHeight forKey:GW_TAB_HEIGHT];
+    [[NSUserDefaults standardUserDefaults] setDouble:homeIndicatorHeight forKey:GW_HOME_INDICATOR_HEIGHT];
+    [[NSUserDefaults standardUserDefaults] setDouble:topSafeHeight forKey:GW_Landscape_SafeArea_Width];
+    [[NSUserDefaults standardUserDefaults] setBool:hasSafeArea forKey:GW_HAS_SafeArea];
+    [[NSUserDefaults standardUserDefaults] setDouble:hasSafeArea?tabHeight + homeIndicatorHeight:tabHeight forKey:GW_TAB_HEIGHT];
     [[NSUserDefaults standardUserDefaults] synchronize];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:UIApplicationDidFinishLaunchingNotification object:nil];
 

@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 ///是否有安全区域 iphoneX以上版本
-#define IS_HAS_SafeArea_GW ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? (CGSizeEqualToSize(CGSizeMake(1125, 2436), [[[UIScreen mainScreen] currentMode] size]) || CGSizeEqualToSize(CGSizeMake(1242, 2688), [[[UIScreen mainScreen] currentMode] size]) || CGSizeEqualToSize(CGSizeMake(828, 1792), [[[UIScreen mainScreen] currentMode] size])) : NO)
+#define IS_HAS_SafeArea_GW [[NSUserDefaults standardUserDefaults] boolForKey:GW_HAS_SafeArea]
 //是否是ipad
 #define IS_PAD_GW ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
 //是否是手机
@@ -27,12 +27,18 @@ NS_ASSUME_NONNULL_BEGIN
 //状态栏高度
 #define StatusBarHeight_GW [[NSUserDefaults standardUserDefaults] doubleForKey:GW_STATUS_HEIGHT]
 //home indicator（home指示器）
-#define HomeIndicatorHeight_GW (IS_HAS_SafeArea_GW ? 34 : 0)
+#define HomeIndicatorHeight_GW [[NSUserDefaults standardUserDefaults] doubleForKey:GW_HOME_INDICATOR_HEIGHT]
 //横屏状态下左右安全边距
-#define Landscape_SafeArea_Width_GW  (IS_HAS_SafeArea_GW ? 44 : 0)
+#define Landscape_SafeArea_Width_GW  [[NSUserDefaults standardUserDefaults] doubleForKey:GW_Landscape_SafeArea_Width]
 //按像素适配
 #define GWWidthPX(x) (IS_PAD_GW ? ceil([UIScreen mainScreen].bounds.size.width*(x)/768) : ceil([UIScreen mainScreen].bounds.size.width*(x)/375))
 
+//是否有安全区域
+static NSString *const GW_HAS_SafeArea = @"GW_HAS_SafeArea";
+//横屏状态下左右安全边距
+static NSString *const GW_Landscape_SafeArea_Width = @"GW_Landscape_SafeArea_Width";
+//底部指示器高度
+static NSString *const GW_HOME_INDICATOR_HEIGHT = @"GW_HOME_INDICATOR_HEIGHT";
 //导航栏高度
 static NSString *const GW_NAV_HEIGHT = @"GW_NAV_HEIGHT";
 //导航栏-navbar高度
