@@ -7,9 +7,15 @@
 //
 
 #import "TestModel.h"
-#import "NSObject+GW_Model.h"
+
 @implementation TestModel
+GW_CodingImplementation
 + (NSDictionary<NSString *,Class> *)GW_ModelDelegateReplacePropertyMapper{
-    return @{@"testDic":[TestModel class],@"TestDic":[TestModel class]};
+    return @{@"testDic":[TestModel class],
+             @"TestDic":[TestModel class],
+             @"testArr":[TestModel class]
+    };
 }
+
+
 @end
