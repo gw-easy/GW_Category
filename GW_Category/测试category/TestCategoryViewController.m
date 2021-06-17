@@ -24,39 +24,83 @@
 }
 
 - (void)testModel{
-    NSMutableDictionary *muDict = [NSMutableDictionary dictionary];
-//    [muDict setValue:@"222" forKey:@"first"];
-    [muDict setValue:@"666" forKey:@"First"];
-//    [muDict setValue:@"222" forKey:@"first"];
-//    [muDict setValue:@{@"First":@"333"} forKey:@"testDic"];
-    [muDict setValue:@{@"First":@"111"} forKey:@"TestDic"];
-    [muDict setValue:@{@"First":@"333"} forKey:@"testDic"];
+    NSMutableDictionary *testModelDict5 = [NSMutableDictionary dictionary];
+    [testModelDict5 setValue:@"modelthree-six" forKey:@"six"];
+    [testModelDict5 setValue:@"modelthree-seven" forKey:@"seven"];
     
-    TestModel *model1 = [TestModel new];
-    model1.first = @"123";
-    model1.secend = @"345";
-    model1.testNum = 777;
-    
-    NSMutableArray *test = [NSMutableArray new];
-    [test addObject:model1];
-    
-    [muDict setValue:test forKey:@"testArr"];
-    TestModel *model = [TestModel GW_JsonToModel:[muDict GW_ModelToJson:muDict]];
-    TestModel *model2 = [TestModel new];
-    model2.first = @"111";
-    model2.secend = @"222";
-    model2.testNum = 888;
-    [model.testArr replaceObjectAtIndex:0 withObject:model2];
-//    NSLog(@"%@---%@-----%@",model.first,model.TestDic.First);
-    TestModel *subM = model.testArr.firstObject;
-    NSLog(@"%@---%@---%@---",subM.first,subM.secend,model);
-        NSLog(@"%@--",[model.testArr.firstObject class]);
-    
-//    测试copy
-    TestModel *testCopyModel = [model GW_Copy:model];
-    TestModel *testCopyModel1 = testCopyModel.testArr.firstObject;
-    NSLog(@"%@---%@---%@---",testCopyModel1.first,testCopyModel1.secend,testCopyModel.testArr);
+    NSMutableDictionary *testModelDict3 = [NSMutableDictionary dictionary];
+    [testModelDict3 setValue:@"modelthree" forKey:@"first"];
+    [testModelDict3 setValue:@"modelthree-five" forKey:@"five"];
+    [testModelDict3 setValue:@"modelthree-four" forKey:@"four"];
+    [testModelDict3 setValue:@"modelthree-six" forKey:@"six"];
+    [testModelDict3 setValue:@"modelthree-seven" forKey:@"seven"];
+    [testModelDict3 setValue:@(333) forKey:@"secend"];
+    [testModelDict3 setValue:@{@"secend":@(333)} forKey:@"testDic"];
+    [testModelDict3 setValue:@[testModelDict5,testModelDict5] forKey:@"testArr"];
 
+    
+    NSMutableDictionary *testModelDict2 = [NSMutableDictionary dictionary];
+    [testModelDict2 setValue:@"modeltwo" forKey:@"first"];
+    [testModelDict2 setValue:@(222) forKey:@"secend"];
+    [testModelDict2 setValue:@{@"secend":@(222)} forKey:@"testDic"];
+    [testModelDict2 setValue:@[testModelDict3,testModelDict3] forKey:@"testArr"];
+
+    
+    NSMutableDictionary *testModelDict = [NSMutableDictionary dictionary];
+    [testModelDict setValue:@"arr" forKey:@"first"];
+    [testModelDict setValue:@(111) forKey:@"secend"];
+    [testModelDict setValue:@{@"secend":@(111)} forKey:@"testDic"];
+    [testModelDict setValue:@[testModelDict2,testModelDict2] forKey:@"testArr"];
+
+    
+    NSString *json = [testModelDict GW_ModelToJson:testModelDict];
+    NSLog(@"json = %@",json);
+    
+    [self testJsonToModel:json];
+//    [self testModelCopy:json];
+}
+
+- (void)testJsonToModel:(NSString *)json{
+    TestModel *model = [TestModel GW_JsonToModel:json];
+    [self printModelProperty:model];
+}
+
+- (void)testModelCopy:(NSString *)json{
+    TestModel *model = [TestModel GW_JsonToModel:json];
+    
+    [self printModelAddress:model];
+    
+    TestModel *model2 = [model GW_Copy:model needDepth:YES];
+    [self printModelAddress:model2];
+}
+
+-(void)printModelProperty:(TestModel *)model{
+    NSLog(@"model --- model-first = %@,model-secend=%@,model-testDic=%@,model-testArr=%@",model.first,model.secend,model.testDic,model.testArr);
+    for (TestModelTwo *twoModel in model.testArr) {
+        NSLog(@"twoModel --- model-first = %@,model-secend=%@,model-testDic=%@,model-testArr=%@",twoModel.first,twoModel.secend,twoModel.testDic,twoModel.testArr);
+        for (TestModelThree *threeModel in twoModel.testArr) {
+            NSLog(@"threeModel --- model-first = %@,model-secend=%@,model-testArr=%@,model-four=%@,model-five=%@,model-six=%@,model-seven=%@",threeModel.first,threeModel.secend,threeModel.testArr,threeModel.four,threeModel.five,threeModel.six,threeModel.seven);
+            for (TestModelFive *fiveModel in threeModel.testArr) {
+                NSLog(@"fiveModel --- model-four=%@,model-five=%@",fiveModel.six,fiveModel.seven);
+
+            }
+        }
+
+    }
+}
+
+- (void)printModelAddress:(TestModel *)model{
+    NSLog(@"model = %@",model);
+    for (TestModelTwo *twoModel in model.testArr) {
+        NSLog(@"twoModel = %@",twoModel);
+        for (TestModelThree *threeModel in twoModel.testArr) {
+            NSLog(@"threeModel = %@",threeModel);
+            for (TestModelFour *fourModel in threeModel.testArr) {
+                NSLog(@"fourModel = %@",fourModel);
+
+            }
+        }
+    }
 }
 
 - (void)testReplaceStr{

@@ -105,6 +105,12 @@ return self; \
 - (id)GW_Copy:(__kindof NSObject *)rootObj;
 
 
+/// model copy
+/// @param rootObj model本身
+/// @param needDepth 是否需要深copy 对所有子model和类型进行copy
+- (id)GW_Copy:(__weak __kindof NSObject *)rootObj needDepth:(BOOL)needDepth;
+
+
 /**
  归档
 

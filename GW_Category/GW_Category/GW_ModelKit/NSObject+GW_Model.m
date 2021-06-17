@@ -137,6 +137,15 @@ typedef NS_OPTIONS(NSUInteger, GW_TYPE) {
 
 //复制
 - (id)GW_Copy:(__weak __kindof NSObject *)rootObj{
+    return [self GW_Copy:rootObj needDepth:NO];
+}
+
+
+- (id)GW_Copy:(__weak __kindof NSObject *)rootObj needDepth:(BOOL)needDepth{
+    if (needDepth) {
+        id rootJson = [rootObj GW_ModelToJson:rootObj];
+        return [rootObj.class GW_JsonToModel:rootJson];
+    }
     id copySelf = self.class.new;
     [self.class GW_EnumeratePropertyNameBlock:^(NSString *propertyName, objc_property_t property, NSInteger index, BOOL *stop) {
 //        NSLog(@"%@",propertyName);
